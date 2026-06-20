@@ -1,0 +1,38 @@
+{
+  "majorCode": "080204",
+  "majorName": "车辆工程",
+  "degreeType": "学术学位",
+  "categoryCode": "08",
+  "categoryName": "工学",
+  "disciplineCode": "0802",
+  "disciplineName": "机械工程",
+  "updatedAt": "2026-06-19 11:25:34",
+  "lineType": "复试线（初试门槛）",
+  "source": "学校研究生招生官网复试线抓取",
+  "lines": [
+    {
+      "year": 2024,
+      "schoolCode": "10004",
+      "schoolName": "北京交通大学",
+      "provinceName": "北京",
+      "collegeCode": "",
+      "collegeName": "机械与电子控制工程学院",
+      "majorCode": "080204",
+      "majorName": "车辆工程",
+      "degreeType": "",
+      "studyMode": "",
+      "lineType": "复试线（初试门槛）",
+      "totalScore": 310,
+      "politics": null,
+      "foreignLanguage": null,
+      "business1": null,
+      "business2": null,
+      "singleSubject100": 37,
+      "singleSubjectGt100": 56,
+      "notes": "",
+      "sourceTitle": "北京交通大学2024年硕士研究生招生复试分数线",
+      "sourceUrl": "https://yzb.bjtu.edu.cn/sszs/99a8ade7025a4eba98710007f87afef0.htm",
+      "confidence": "high"
+    }
+  ]
+}

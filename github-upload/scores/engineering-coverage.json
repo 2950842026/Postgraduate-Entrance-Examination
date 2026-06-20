@@ -1,0 +1,2569 @@
+{
+  "generatedAt": "2026-06-19T04:47:13.535Z",
+  "categoryCode": "08",
+  "categoryName": "工学",
+  "engineeringMajorCount": 312,
+  "engineeringOfferingCount": 9761,
+  "scoreFileCount": 60,
+  "coveredOfferingCount": 6270,
+  "coveredMajors": [
+    {
+      "majorCode": "080100",
+      "majorName": "力学",
+      "lineCount": 6,
+      "schoolCount": 2,
+      "yearCount": 3,
+      "offeringCount": 85,
+      "file": "scores/080100.json"
+    },
+    {
+      "majorCode": "080200",
+      "majorName": "机械工程",
+      "lineCount": 5,
+      "schoolCount": 2,
+      "yearCount": 3,
+      "offeringCount": 221,
+      "file": "scores/080200.json"
+    },
+    {
+      "majorCode": "080201",
+      "majorName": "机械制造及其自动化",
+      "lineCount": 1,
+      "schoolCount": 1,
+      "yearCount": 1,
+      "offeringCount": 14,
+      "file": "scores/080201.json"
+    },
+    {
+      "majorCode": "080202",
+      "majorName": "机械电子工程",
+      "lineCount": 1,
+      "schoolCount": 1,
+      "yearCount": 1,
+      "offeringCount": 16,
+      "file": "scores/080202.json"
+    },
+    {
+      "majorCode": "080203",
+      "majorName": "机械设计及理论",
+      "lineCount": 1,
+      "schoolCount": 1,
+      "yearCount": 1,
+      "offeringCount": 21,
+      "file": "scores/080203.json"
+    },
+    {
+      "majorCode": "080204",
+      "majorName": "车辆工程",
+      "lineCount": 1,
+      "schoolCount": 1,
+      "yearCount": 1,
+      "offeringCount": 26,
+      "file": "scores/080204.json"
+    },
+    {
+      "majorCode": "0802J1",
+      "majorName": "低空技术与工程",
+      "lineCount": 5,
+      "schoolCount": 1,
+      "yearCount": 1,
+      "offeringCount": 10,
+      "file": "scores/0802J1.json"
+    },
+    {
+      "majorCode": "080300",
+      "majorName": "光学工程",
+      "lineCount": 6,
+      "schoolCount": 2,
+      "yearCount": 3,
+      "offeringCount": 100,
+      "file": "scores/080300.json"
+    },
+    {
+      "majorCode": "080400",
+      "majorName": "仪器科学与技术",
+      "lineCount": 3,
+      "schoolCount": 1,
+      "yearCount": 3,
+      "offeringCount": 72,
+      "file": "scores/080400.json"
+    },
+    {
+      "majorCode": "080500",
+      "majorName": "材料科学与工程",
+      "lineCount": 9,
+      "schoolCount": 2,
+      "yearCount": 3,
+      "offeringCount": 231,
+      "file": "scores/080500.json"
+    },
+    {
+      "majorCode": "080700",
+      "majorName": "动力工程及工程热物理",
+      "lineCount": 6,
+      "schoolCount": 2,
+      "yearCount": 3,
+      "offeringCount": 98,
+      "file": "scores/080700.json"
+    },
+    {
+      "majorCode": "080800",
+      "majorName": "电气工程",
+      "lineCount": 3,
+      "schoolCount": 1,
+      "yearCount": 3,
+      "offeringCount": 115,
+      "file": "scores/080800.json"
+    },
+    {
+      "majorCode": "080900",
+      "majorName": "电子科学与技术",
+      "lineCount": 8,
+      "schoolCount": 2,
+      "yearCount": 3,
+      "offeringCount": 116,
+      "file": "scores/080900.json"
+    },
+    {
+      "majorCode": "081000",
+      "majorName": "信息与通信工程",
+      "lineCount": 7,
+      "schoolCount": 2,
+      "yearCount": 3,
+      "offeringCount": 183,
+      "file": "scores/081000.json"
+    },
+    {
+      "majorCode": "0810J1",
+      "majorName": "低空技术与工程",
+      "lineCount": 1,
+      "schoolCount": 1,
+      "yearCount": 1,
+      "offeringCount": 2,
+      "file": "scores/0810J1.json"
+    },
+    {
+      "majorCode": "081100",
+      "majorName": "控制科学与工程",
+      "lineCount": 8,
+      "schoolCount": 2,
+      "yearCount": 3,
+      "offeringCount": 201,
+      "file": "scores/081100.json"
+    },
+    {
+      "majorCode": "081200",
+      "majorName": "计算机科学与技术",
+      "lineCount": 6,
+      "schoolCount": 2,
+      "yearCount": 3,
+      "offeringCount": 272,
+      "file": "scores/081200.json"
+    },
+    {
+      "majorCode": "0812J1",
+      "majorName": "低空技术与工程",
+      "lineCount": 1,
+      "schoolCount": 1,
+      "yearCount": 1,
+      "offeringCount": 5,
+      "file": "scores/0812J1.json"
+    },
+    {
+      "majorCode": "081300",
+      "majorName": "建筑学",
+      "lineCount": 6,
+      "schoolCount": 2,
+      "yearCount": 3,
+      "offeringCount": 86,
+      "file": "scores/081300.json"
+    },
+    {
+      "majorCode": "081400",
+      "majorName": "土木工程",
+      "lineCount": 12,
+      "schoolCount": 2,
+      "yearCount": 3,
+      "offeringCount": 144,
+      "file": "scores/081400.json"
+    },
+    {
+      "majorCode": "0814J1",
+      "majorName": "低空技术与工程",
+      "lineCount": 2,
+      "schoolCount": 1,
+      "yearCount": 2,
+      "offeringCount": 2,
+      "file": "scores/0814J1.json"
+    },
+    {
+      "majorCode": "081500",
+      "majorName": "水利工程",
+      "lineCount": 3,
+      "schoolCount": 1,
+      "yearCount": 3,
+      "offeringCount": 51,
+      "file": "scores/081500.json"
+    },
+    {
+      "majorCode": "081700",
+      "majorName": "化学工程与技术",
+      "lineCount": 3,
+      "schoolCount": 1,
+      "yearCount": 3,
+      "offeringCount": 154,
+      "file": "scores/081700.json"
+    },
+    {
+      "majorCode": "082300",
+      "majorName": "交通运输工程",
+      "lineCount": 3,
+      "schoolCount": 1,
+      "yearCount": 3,
+      "offeringCount": 49,
+      "file": "scores/082300.json"
+    },
+    {
+      "majorCode": "082301",
+      "majorName": "道路与铁道工程",
+      "lineCount": 3,
+      "schoolCount": 1,
+      "yearCount": 3,
+      "offeringCount": 18,
+      "file": "scores/082301.json"
+    },
+    {
+      "majorCode": "082302",
+      "majorName": "交通信息工程及控制",
+      "lineCount": 3,
+      "schoolCount": 1,
+      "yearCount": 3,
+      "offeringCount": 16,
+      "file": "scores/082302.json"
+    },
+    {
+      "majorCode": "082303",
+      "majorName": "交通运输规划与管理",
+      "lineCount": 3,
+      "schoolCount": 1,
+      "yearCount": 3,
+      "offeringCount": 15,
+      "file": "scores/082303.json"
+    },
+    {
+      "majorCode": "082304",
+      "majorName": "载运工具运用工程",
+      "lineCount": 1,
+      "schoolCount": 1,
+      "yearCount": 1,
+      "offeringCount": 12,
+      "file": "scores/082304.json"
+    },
+    {
+      "majorCode": "0823J1",
+      "majorName": "城市交通",
+      "lineCount": 2,
+      "schoolCount": 1,
+      "yearCount": 1,
+      "offeringCount": 1,
+      "file": "scores/0823J1.json"
+    },
+    {
+      "majorCode": "083000",
+      "majorName": "环境科学与工程",
+      "lineCount": 6,
+      "schoolCount": 2,
+      "yearCount": 3,
+      "offeringCount": 179,
+      "file": "scores/083000.json"
+    },
+    {
+      "majorCode": "083100",
+      "majorName": "生物医学工程",
+      "lineCount": 3,
+      "schoolCount": 1,
+      "yearCount": 3,
+      "offeringCount": 83,
+      "file": "scores/083100.json"
+    },
+    {
+      "majorCode": "083300",
+      "majorName": "城乡规划学",
+      "lineCount": 6,
+      "schoolCount": 2,
+      "yearCount": 3,
+      "offeringCount": 83,
+      "file": "scores/083300.json"
+    },
+    {
+      "majorCode": "083500",
+      "majorName": "软件工程",
+      "lineCount": 8,
+      "schoolCount": 2,
+      "yearCount": 3,
+      "offeringCount": 139,
+      "file": "scores/083500.json"
+    },
+    {
+      "majorCode": "083700",
+      "majorName": "安全科学与工程",
+      "lineCount": 3,
+      "schoolCount": 1,
+      "yearCount": 3,
+      "offeringCount": 64,
+      "file": "scores/083700.json"
+    },
+    {
+      "majorCode": "083900",
+      "majorName": "网络空间安全",
+      "lineCount": 6,
+      "schoolCount": 2,
+      "yearCount": 3,
+      "offeringCount": 91,
+      "file": "scores/083900.json"
+    },
+    {
+      "majorCode": "085100",
+      "majorName": "建筑",
+      "lineCount": 9,
+      "schoolCount": 2,
+      "yearCount": 3,
+      "offeringCount": 48,
+      "file": "scores/085100.json"
+    },
+    {
+      "majorCode": "085300",
+      "majorName": "城乡规划",
+      "lineCount": 7,
+      "schoolCount": 2,
+      "yearCount": 3,
+      "offeringCount": 47,
+      "file": "scores/085300.json"
+    },
+    {
+      "majorCode": "085401",
+      "majorName": "新一代电子信息技术（含量子技术等）",
+      "lineCount": 7,
+      "schoolCount": 1,
+      "yearCount": 3,
+      "offeringCount": 185,
+      "file": "scores/085401.json"
+    },
+    {
+      "majorCode": "085402",
+      "majorName": "通信工程（含宽带网络、移动通信等）",
+      "lineCount": 11,
+      "schoolCount": 2,
+      "yearCount": 3,
+      "offeringCount": 131,
+      "file": "scores/085402.json"
+    },
+    {
+      "majorCode": "085403",
+      "majorName": "集成电路工程",
+      "lineCount": 3,
+      "schoolCount": 1,
+      "yearCount": 3,
+      "offeringCount": 93,
+      "file": "scores/085403.json"
+    },
+    {
+      "majorCode": "085404",
+      "majorName": "计算机技术",
+      "lineCount": 9,
+      "schoolCount": 2,
+      "yearCount": 3,
+      "offeringCount": 298,
+      "file": "scores/085404.json"
+    },
+    {
+      "majorCode": "085405",
+      "majorName": "软件工程",
+      "lineCount": 9,
+      "schoolCount": 2,
+      "yearCount": 3,
+      "offeringCount": 137,
+      "file": "scores/085405.json"
+    },
+    {
+      "majorCode": "085406",
+      "majorName": "控制工程",
+      "lineCount": 6,
+      "schoolCount": 2,
+      "yearCount": 3,
+      "offeringCount": 205,
+      "file": "scores/085406.json"
+    },
+    {
+      "majorCode": "085407",
+      "majorName": "仪器仪表工程",
+      "lineCount": 3,
+      "schoolCount": 1,
+      "yearCount": 3,
+      "offeringCount": 64,
+      "file": "scores/085407.json"
+    },
+    {
+      "majorCode": "085408",
+      "majorName": "光电信息工程",
+      "lineCount": 9,
+      "schoolCount": 2,
+      "yearCount": 3,
+      "offeringCount": 126,
+      "file": "scores/085408.json"
+    },
+    {
+      "majorCode": "085409",
+      "majorName": "生物医学工程",
+      "lineCount": 3,
+      "schoolCount": 1,
+      "yearCount": 3,
+      "offeringCount": 54,
+      "file": "scores/085409.json"
+    },
+    {
+      "majorCode": "085500",
+      "majorName": "机械",
+      "lineCount": 3,
+      "schoolCount": 1,
+      "yearCount": 3,
+      "offeringCount": 205,
+      "file": "scores/085500.json"
+    },
+    {
+      "majorCode": "085501",
+      "majorName": "机械工程",
+      "lineCount": 6,
+      "schoolCount": 2,
+      "yearCount": 3,
+      "offeringCount": 142,
+      "file": "scores/085501.json"
+    },
+    {
+      "majorCode": "085502",
+      "majorName": "车辆工程",
+      "lineCount": 3,
+      "schoolCount": 1,
+      "yearCount": 3,
+      "offeringCount": 57,
+      "file": "scores/085502.json"
+    },
+    {
+      "majorCode": "085507",
+      "majorName": "工业设计工程",
+      "lineCount": 3,
+      "schoolCount": 1,
+      "yearCount": 3,
+      "offeringCount": 53,
+      "file": "scores/085507.json"
+    },
+    {
+      "majorCode": "085509",
+      "majorName": "智能制造技术",
+      "lineCount": 3,
+      "schoolCount": 1,
+      "yearCount": 3,
+      "offeringCount": 42,
+      "file": "scores/085509.json"
+    },
+    {
+      "majorCode": "085600",
+      "majorName": "材料与化工",
+      "lineCount": 3,
+      "schoolCount": 1,
+      "yearCount": 3,
+      "offeringCount": 222,
+      "file": "scores/085600.json"
+    },
+    {
+      "majorCode": "085601",
+      "majorName": "材料工程",
+      "lineCount": 10,
+      "schoolCount": 2,
+      "yearCount": 3,
+      "offeringCount": 160,
+      "file": "scores/085601.json"
+    },
+    {
+      "majorCode": "085701",
+      "majorName": "环境工程",
+      "lineCount": 6,
+      "schoolCount": 2,
+      "yearCount": 3,
+      "offeringCount": 169,
+      "file": "scores/085701.json"
+    },
+    {
+      "majorCode": "085800",
+      "majorName": "能源动力",
+      "lineCount": 5,
+      "schoolCount": 2,
+      "yearCount": 3,
+      "offeringCount": 103,
+      "file": "scores/085800.json"
+    },
+    {
+      "majorCode": "085801",
+      "majorName": "电气工程",
+      "lineCount": 6,
+      "schoolCount": 1,
+      "yearCount": 3,
+      "offeringCount": 166,
+      "file": "scores/085801.json"
+    },
+    {
+      "majorCode": "085900",
+      "majorName": "土木水利",
+      "lineCount": 9,
+      "schoolCount": 1,
+      "yearCount": 3,
+      "offeringCount": 137,
+      "file": "scores/085900.json"
+    },
+    {
+      "majorCode": "085901",
+      "majorName": "土木工程",
+      "lineCount": 6,
+      "schoolCount": 1,
+      "yearCount": 3,
+      "offeringCount": 128,
+      "file": "scores/085901.json"
+    },
+    {
+      "majorCode": "086000",
+      "majorName": "生物与医药",
+      "lineCount": 2,
+      "schoolCount": 1,
+      "yearCount": 2,
+      "offeringCount": 224,
+      "file": "scores/086000.json"
+    },
+    {
+      "majorCode": "086100",
+      "majorName": "交通运输",
+      "lineCount": 12,
+      "schoolCount": 2,
+      "yearCount": 3,
+      "offeringCount": 99,
+      "file": "scores/086100.json"
+    }
+  ],
+  "missingMajors": [
+    {
+      "majorCode": "080101",
+      "majorName": "一般力学与力学基础",
+      "degreeType": "学术学位",
+      "disciplineCode": "0801",
+      "disciplineName": "力学",
+      "offeringCount": 3
+    },
+    {
+      "majorCode": "080102",
+      "majorName": "固体力学",
+      "degreeType": "学术学位",
+      "disciplineCode": "0801",
+      "disciplineName": "力学",
+      "offeringCount": 13
+    },
+    {
+      "majorCode": "080103",
+      "majorName": "流体力学",
+      "degreeType": "学术学位",
+      "disciplineCode": "0801",
+      "disciplineName": "力学",
+      "offeringCount": 12
+    },
+    {
+      "majorCode": "080104",
+      "majorName": "工程力学",
+      "degreeType": "学术学位",
+      "disciplineCode": "0801",
+      "disciplineName": "力学",
+      "offeringCount": 16
+    },
+    {
+      "majorCode": "0801J1",
+      "majorName": "低空技术与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0801",
+      "disciplineName": "力学",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0801J7",
+      "majorName": "低空技术与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0801",
+      "disciplineName": "力学",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0801Z1",
+      "majorName": "智能制造与机器人",
+      "degreeType": "学术学位",
+      "disciplineCode": "0801",
+      "disciplineName": "力学",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0803J1",
+      "majorName": "低空技术与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0803",
+      "disciplineName": "光学工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0803Z1",
+      "majorName": "光电检测技术及仪器",
+      "degreeType": "学术学位",
+      "disciplineCode": "0803",
+      "disciplineName": "光学工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "080401",
+      "majorName": "精密仪器及机械",
+      "degreeType": "学术学位",
+      "disciplineCode": "0804",
+      "disciplineName": "仪器科学与技术",
+      "offeringCount": 3
+    },
+    {
+      "majorCode": "080402",
+      "majorName": "测试计量技术及仪器",
+      "degreeType": "学术学位",
+      "disciplineCode": "0804",
+      "disciplineName": "仪器科学与技术",
+      "offeringCount": 7
+    },
+    {
+      "majorCode": "0804Z1",
+      "majorName": "光电检测与微电子学",
+      "degreeType": "学术学位",
+      "disciplineCode": "0804",
+      "disciplineName": "仪器科学与技术",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0804Z2",
+      "majorName": "电气测试技术与仪器",
+      "degreeType": "学术学位",
+      "disciplineCode": "0804",
+      "disciplineName": "仪器科学与技术",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "080501",
+      "majorName": "材料物理与化学",
+      "degreeType": "学术学位",
+      "disciplineCode": "0805",
+      "disciplineName": "材料科学与工程",
+      "offeringCount": 19
+    },
+    {
+      "majorCode": "080502",
+      "majorName": "材料学",
+      "degreeType": "学术学位",
+      "disciplineCode": "0805",
+      "disciplineName": "材料科学与工程",
+      "offeringCount": 29
+    },
+    {
+      "majorCode": "080503",
+      "majorName": "材料加工工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0805",
+      "disciplineName": "材料科学与工程",
+      "offeringCount": 27
+    },
+    {
+      "majorCode": "0805J1",
+      "majorName": "储能科学与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0805",
+      "disciplineName": "材料科学与工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "080600",
+      "majorName": "冶金工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0806",
+      "disciplineName": "冶金工程",
+      "offeringCount": 26
+    },
+    {
+      "majorCode": "080601",
+      "majorName": "冶金物理化学",
+      "degreeType": "学术学位",
+      "disciplineCode": "0806",
+      "disciplineName": "冶金工程",
+      "offeringCount": 3
+    },
+    {
+      "majorCode": "080602",
+      "majorName": "钢铁冶金",
+      "degreeType": "学术学位",
+      "disciplineCode": "0806",
+      "disciplineName": "冶金工程",
+      "offeringCount": 2
+    },
+    {
+      "majorCode": "080603",
+      "majorName": "有色金属冶金",
+      "degreeType": "学术学位",
+      "disciplineCode": "0806",
+      "disciplineName": "冶金工程",
+      "offeringCount": 4
+    },
+    {
+      "majorCode": "0806J4",
+      "majorName": "储能化学与物理",
+      "degreeType": "学术学位",
+      "disciplineCode": "0806",
+      "disciplineName": "冶金工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0806Z1",
+      "majorName": "稀土工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0806",
+      "disciplineName": "冶金工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0806Z2",
+      "majorName": "冶金能源工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0806",
+      "disciplineName": "冶金工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "080701",
+      "majorName": "工程热物理",
+      "degreeType": "学术学位",
+      "disciplineCode": "0807",
+      "disciplineName": "动力工程及工程热物理",
+      "offeringCount": 8
+    },
+    {
+      "majorCode": "080702",
+      "majorName": "热能工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0807",
+      "disciplineName": "动力工程及工程热物理",
+      "offeringCount": 11
+    },
+    {
+      "majorCode": "080703",
+      "majorName": "动力机械及工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0807",
+      "disciplineName": "动力工程及工程热物理",
+      "offeringCount": 7
+    },
+    {
+      "majorCode": "080704",
+      "majorName": "流体机械及工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0807",
+      "disciplineName": "动力工程及工程热物理",
+      "offeringCount": 5
+    },
+    {
+      "majorCode": "080705",
+      "majorName": "制冷及低温工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0807",
+      "disciplineName": "动力工程及工程热物理",
+      "offeringCount": 10
+    },
+    {
+      "majorCode": "080706",
+      "majorName": "化工过程机械",
+      "degreeType": "学术学位",
+      "disciplineCode": "0807",
+      "disciplineName": "动力工程及工程热物理",
+      "offeringCount": 10
+    },
+    {
+      "majorCode": "0807J1",
+      "majorName": "储能科学与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0807",
+      "disciplineName": "动力工程及工程热物理",
+      "offeringCount": 2
+    },
+    {
+      "majorCode": "080801",
+      "majorName": "电机与电器",
+      "degreeType": "学术学位",
+      "disciplineCode": "0808",
+      "disciplineName": "电气工程",
+      "offeringCount": 5
+    },
+    {
+      "majorCode": "080802",
+      "majorName": "电力系统及其自动化",
+      "degreeType": "学术学位",
+      "disciplineCode": "0808",
+      "disciplineName": "电气工程",
+      "offeringCount": 6
+    },
+    {
+      "majorCode": "080803",
+      "majorName": "高电压与绝缘技术",
+      "degreeType": "学术学位",
+      "disciplineCode": "0808",
+      "disciplineName": "电气工程",
+      "offeringCount": 4
+    },
+    {
+      "majorCode": "080804",
+      "majorName": "电力电子与电力传动",
+      "degreeType": "学术学位",
+      "disciplineCode": "0808",
+      "disciplineName": "电气工程",
+      "offeringCount": 9
+    },
+    {
+      "majorCode": "080805",
+      "majorName": "电工理论与新技术",
+      "degreeType": "学术学位",
+      "disciplineCode": "0808",
+      "disciplineName": "电气工程",
+      "offeringCount": 6
+    },
+    {
+      "majorCode": "0808J1",
+      "majorName": "低碳能源化学与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0808",
+      "disciplineName": "电气工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0808J3",
+      "majorName": "储能科学与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0808",
+      "disciplineName": "电气工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "080901",
+      "majorName": "物理电子学",
+      "degreeType": "学术学位",
+      "disciplineCode": "0809",
+      "disciplineName": "电子科学与技术",
+      "offeringCount": 11
+    },
+    {
+      "majorCode": "080902",
+      "majorName": "电路与系统",
+      "degreeType": "学术学位",
+      "disciplineCode": "0809",
+      "disciplineName": "电子科学与技术",
+      "offeringCount": 13
+    },
+    {
+      "majorCode": "080903",
+      "majorName": "微电子学与固体电子学",
+      "degreeType": "学术学位",
+      "disciplineCode": "0809",
+      "disciplineName": "电子科学与技术",
+      "offeringCount": 14
+    },
+    {
+      "majorCode": "080904",
+      "majorName": "电磁场与微波技术",
+      "degreeType": "学术学位",
+      "disciplineCode": "0809",
+      "disciplineName": "电子科学与技术",
+      "offeringCount": 14
+    },
+    {
+      "majorCode": "0809Z1",
+      "majorName": "机电系统电子技术",
+      "degreeType": "学术学位",
+      "disciplineCode": "0809",
+      "disciplineName": "电子科学与技术",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "081001",
+      "majorName": "通信与信息系统",
+      "degreeType": "学术学位",
+      "disciplineCode": "0810",
+      "disciplineName": "信息与通信工程",
+      "offeringCount": 24
+    },
+    {
+      "majorCode": "081002",
+      "majorName": "信号与信息处理",
+      "degreeType": "学术学位",
+      "disciplineCode": "0810",
+      "disciplineName": "信息与通信工程",
+      "offeringCount": 23
+    },
+    {
+      "majorCode": "0810J2",
+      "majorName": "低空经济",
+      "degreeType": "学术学位",
+      "disciplineCode": "0810",
+      "disciplineName": "信息与通信工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0810J4",
+      "majorName": "低空技术与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0810",
+      "disciplineName": "信息与通信工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "081101",
+      "majorName": "控制理论与控制工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0811",
+      "disciplineName": "控制科学与工程",
+      "offeringCount": 15
+    },
+    {
+      "majorCode": "081102",
+      "majorName": "检测技术与自动化装置",
+      "degreeType": "学术学位",
+      "disciplineCode": "0811",
+      "disciplineName": "控制科学与工程",
+      "offeringCount": 13
+    },
+    {
+      "majorCode": "081103",
+      "majorName": "系统工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0811",
+      "disciplineName": "控制科学与工程",
+      "offeringCount": 17
+    },
+    {
+      "majorCode": "081104",
+      "majorName": "模式识别与智能系统",
+      "degreeType": "学术学位",
+      "disciplineCode": "0811",
+      "disciplineName": "控制科学与工程",
+      "offeringCount": 11
+    },
+    {
+      "majorCode": "081105",
+      "majorName": "导航、制导与控制",
+      "degreeType": "学术学位",
+      "disciplineCode": "0811",
+      "disciplineName": "控制科学与工程",
+      "offeringCount": 13
+    },
+    {
+      "majorCode": "0811J1",
+      "majorName": "低空技术与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0811",
+      "disciplineName": "控制科学与工程",
+      "offeringCount": 6
+    },
+    {
+      "majorCode": "081201",
+      "majorName": "计算机系统结构",
+      "degreeType": "学术学位",
+      "disciplineCode": "0812",
+      "disciplineName": "计算机科学与技术",
+      "offeringCount": 13
+    },
+    {
+      "majorCode": "081202",
+      "majorName": "计算机软件与理论",
+      "degreeType": "学术学位",
+      "disciplineCode": "0812",
+      "disciplineName": "计算机科学与技术",
+      "offeringCount": 17
+    },
+    {
+      "majorCode": "081203",
+      "majorName": "计算机应用技术",
+      "degreeType": "学术学位",
+      "disciplineCode": "0812",
+      "disciplineName": "计算机科学与技术",
+      "offeringCount": 27
+    },
+    {
+      "majorCode": "081301",
+      "majorName": "建筑历史与理论",
+      "degreeType": "学术学位",
+      "disciplineCode": "0813",
+      "disciplineName": "建筑学",
+      "offeringCount": 3
+    },
+    {
+      "majorCode": "081302",
+      "majorName": "建筑设计及其理论",
+      "degreeType": "学术学位",
+      "disciplineCode": "0813",
+      "disciplineName": "建筑学",
+      "offeringCount": 2
+    },
+    {
+      "majorCode": "081304",
+      "majorName": "建筑技术科学",
+      "degreeType": "学术学位",
+      "disciplineCode": "0813",
+      "disciplineName": "建筑学",
+      "offeringCount": 5
+    },
+    {
+      "majorCode": "0813J1",
+      "majorName": "建筑遗产保护",
+      "degreeType": "学术学位",
+      "disciplineCode": "0813",
+      "disciplineName": "建筑学",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0813Z1",
+      "majorName": "城市与区域规划",
+      "degreeType": "学术学位",
+      "disciplineCode": "0813",
+      "disciplineName": "建筑学",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "081401",
+      "majorName": "岩土工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0814",
+      "disciplineName": "土木工程",
+      "offeringCount": 35
+    },
+    {
+      "majorCode": "081402",
+      "majorName": "结构工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0814",
+      "disciplineName": "土木工程",
+      "offeringCount": 31
+    },
+    {
+      "majorCode": "081403",
+      "majorName": "市政工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0814",
+      "disciplineName": "土木工程",
+      "offeringCount": 38
+    },
+    {
+      "majorCode": "081404",
+      "majorName": "供热、供燃气、通风及空调工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0814",
+      "disciplineName": "土木工程",
+      "offeringCount": 39
+    },
+    {
+      "majorCode": "081405",
+      "majorName": "防灾减灾工程及防护工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0814",
+      "disciplineName": "土木工程",
+      "offeringCount": 25
+    },
+    {
+      "majorCode": "081406",
+      "majorName": "桥梁与隧道工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0814",
+      "disciplineName": "土木工程",
+      "offeringCount": 27
+    },
+    {
+      "majorCode": "0814J3",
+      "majorName": "城市地下空间工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0814",
+      "disciplineName": "土木工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "081501",
+      "majorName": "水文学及水资源",
+      "degreeType": "学术学位",
+      "disciplineCode": "0815",
+      "disciplineName": "水利工程",
+      "offeringCount": 12
+    },
+    {
+      "majorCode": "081502",
+      "majorName": "水力学及河流动力学",
+      "degreeType": "学术学位",
+      "disciplineCode": "0815",
+      "disciplineName": "水利工程",
+      "offeringCount": 10
+    },
+    {
+      "majorCode": "081503",
+      "majorName": "水工结构工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0815",
+      "disciplineName": "水利工程",
+      "offeringCount": 11
+    },
+    {
+      "majorCode": "081504",
+      "majorName": "水利水电工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0815",
+      "disciplineName": "水利工程",
+      "offeringCount": 10
+    },
+    {
+      "majorCode": "081505",
+      "majorName": "港口、海岸及近海工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0815",
+      "disciplineName": "水利工程",
+      "offeringCount": 7
+    },
+    {
+      "majorCode": "0815J1",
+      "majorName": "风能工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0815",
+      "disciplineName": "水利工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0815Z1",
+      "majorName": "城市水务",
+      "degreeType": "学术学位",
+      "disciplineCode": "0815",
+      "disciplineName": "水利工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "081600",
+      "majorName": "测绘科学与技术",
+      "degreeType": "学术学位",
+      "disciplineCode": "0816",
+      "disciplineName": "测绘科学与技术",
+      "offeringCount": 48
+    },
+    {
+      "majorCode": "081601",
+      "majorName": "大地测量学与测量工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0816",
+      "disciplineName": "测绘科学与技术",
+      "offeringCount": 6
+    },
+    {
+      "majorCode": "081602",
+      "majorName": "摄影测量与遥感",
+      "degreeType": "学术学位",
+      "disciplineCode": "0816",
+      "disciplineName": "测绘科学与技术",
+      "offeringCount": 4
+    },
+    {
+      "majorCode": "081603",
+      "majorName": "地图制图学与地理信息工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0816",
+      "disciplineName": "测绘科学与技术",
+      "offeringCount": 5
+    },
+    {
+      "majorCode": "0816J1",
+      "majorName": "低空技术与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0816",
+      "disciplineName": "测绘科学与技术",
+      "offeringCount": 2
+    },
+    {
+      "majorCode": "081701",
+      "majorName": "化学工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0817",
+      "disciplineName": "化学工程与技术",
+      "offeringCount": 16
+    },
+    {
+      "majorCode": "081702",
+      "majorName": "化学工艺",
+      "degreeType": "学术学位",
+      "disciplineCode": "0817",
+      "disciplineName": "化学工程与技术",
+      "offeringCount": 15
+    },
+    {
+      "majorCode": "081703",
+      "majorName": "生物化工",
+      "degreeType": "学术学位",
+      "disciplineCode": "0817",
+      "disciplineName": "化学工程与技术",
+      "offeringCount": 17
+    },
+    {
+      "majorCode": "081704",
+      "majorName": "应用化学",
+      "degreeType": "学术学位",
+      "disciplineCode": "0817",
+      "disciplineName": "化学工程与技术",
+      "offeringCount": 28
+    },
+    {
+      "majorCode": "081705",
+      "majorName": "工业催化",
+      "degreeType": "学术学位",
+      "disciplineCode": "0817",
+      "disciplineName": "化学工程与技术",
+      "offeringCount": 16
+    },
+    {
+      "majorCode": "0817J1",
+      "majorName": "化工安全",
+      "degreeType": "学术学位",
+      "disciplineCode": "0817",
+      "disciplineName": "化学工程与技术",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "081800",
+      "majorName": "地质资源与地质工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0818",
+      "disciplineName": "地质资源与地质工程",
+      "offeringCount": 39
+    },
+    {
+      "majorCode": "081801",
+      "majorName": "矿产普查与勘探",
+      "degreeType": "学术学位",
+      "disciplineCode": "0818",
+      "disciplineName": "地质资源与地质工程",
+      "offeringCount": 11
+    },
+    {
+      "majorCode": "081802",
+      "majorName": "地球探测与信息技术",
+      "degreeType": "学术学位",
+      "disciplineCode": "0818",
+      "disciplineName": "地质资源与地质工程",
+      "offeringCount": 12
+    },
+    {
+      "majorCode": "081803",
+      "majorName": "地质工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0818",
+      "disciplineName": "地质资源与地质工程",
+      "offeringCount": 11
+    },
+    {
+      "majorCode": "0818J1",
+      "majorName": "碳储科学与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0818",
+      "disciplineName": "地质资源与地质工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0818J2",
+      "majorName": "低空技术与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0818",
+      "disciplineName": "地质资源与地质工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0818J3",
+      "majorName": "水文学与水资源",
+      "degreeType": "学术学位",
+      "disciplineCode": "0818",
+      "disciplineName": "地质资源与地质工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0818J7",
+      "majorName": "碳中和科学与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0818",
+      "disciplineName": "地质资源与地质工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0818J8",
+      "majorName": "地下新能源与碳储工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0818",
+      "disciplineName": "地质资源与地质工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "081900",
+      "majorName": "矿业工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0819",
+      "disciplineName": "矿业工程",
+      "offeringCount": 19
+    },
+    {
+      "majorCode": "081901",
+      "majorName": "采矿工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0819",
+      "disciplineName": "矿业工程",
+      "offeringCount": 16
+    },
+    {
+      "majorCode": "081902",
+      "majorName": "矿物加工工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0819",
+      "disciplineName": "矿业工程",
+      "offeringCount": 17
+    },
+    {
+      "majorCode": "081903",
+      "majorName": "安全技术及工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0819",
+      "disciplineName": "矿业工程",
+      "offeringCount": 5
+    },
+    {
+      "majorCode": "0819J1",
+      "majorName": "矿业贸易与投资",
+      "degreeType": "学术学位",
+      "disciplineCode": "0819",
+      "disciplineName": "矿业工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0819J2",
+      "majorName": "新能源科学与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0819",
+      "disciplineName": "矿业工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0819J3",
+      "majorName": "应急技术与管理",
+      "degreeType": "学术学位",
+      "disciplineCode": "0819",
+      "disciplineName": "矿业工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0819J4",
+      "majorName": "新能源科学与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0819",
+      "disciplineName": "矿业工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0819Z1",
+      "majorName": "金属矿选冶一体化",
+      "degreeType": "学术学位",
+      "disciplineCode": "0819",
+      "disciplineName": "矿业工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "082000",
+      "majorName": "石油与天然气工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0820",
+      "disciplineName": "石油与天然气工程",
+      "offeringCount": 13
+    },
+    {
+      "majorCode": "082001",
+      "majorName": "油气井工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0820",
+      "disciplineName": "石油与天然气工程",
+      "offeringCount": 4
+    },
+    {
+      "majorCode": "082002",
+      "majorName": "油气田开发工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0820",
+      "disciplineName": "石油与天然气工程",
+      "offeringCount": 4
+    },
+    {
+      "majorCode": "082003",
+      "majorName": "油气储运工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0820",
+      "disciplineName": "石油与天然气工程",
+      "offeringCount": 5
+    },
+    {
+      "majorCode": "0820J1",
+      "majorName": "低空技术与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0820",
+      "disciplineName": "石油与天然气工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0820J2",
+      "majorName": "能源智能科学与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0820",
+      "disciplineName": "石油与天然气工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0820Z1",
+      "majorName": "海洋油气工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0820",
+      "disciplineName": "石油与天然气工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0820Z2",
+      "majorName": "石油矿场机械",
+      "degreeType": "学术学位",
+      "disciplineCode": "0820",
+      "disciplineName": "石油与天然气工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "082100",
+      "majorName": "纺织科学与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0821",
+      "disciplineName": "纺织科学与工程",
+      "offeringCount": 20
+    },
+    {
+      "majorCode": "082101",
+      "majorName": "纺织工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0821",
+      "disciplineName": "纺织科学与工程",
+      "offeringCount": 2
+    },
+    {
+      "majorCode": "082102",
+      "majorName": "纺织材料与纺织品设计",
+      "degreeType": "学术学位",
+      "disciplineCode": "0821",
+      "disciplineName": "纺织科学与工程",
+      "offeringCount": 3
+    },
+    {
+      "majorCode": "082103",
+      "majorName": "纺织化学与染整工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0821",
+      "disciplineName": "纺织科学与工程",
+      "offeringCount": 3
+    },
+    {
+      "majorCode": "082104",
+      "majorName": "服装设计与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0821",
+      "disciplineName": "纺织科学与工程",
+      "offeringCount": 4
+    },
+    {
+      "majorCode": "0821J8",
+      "majorName": "柔性功能电子器件与系统",
+      "degreeType": "学术学位",
+      "disciplineCode": "0821",
+      "disciplineName": "纺织科学与工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0821Z1",
+      "majorName": "纤维复合材料",
+      "degreeType": "学术学位",
+      "disciplineCode": "0821",
+      "disciplineName": "纺织科学与工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0821Z2",
+      "majorName": "智能电子纺织品与可穿戴技术",
+      "degreeType": "学术学位",
+      "disciplineCode": "0821",
+      "disciplineName": "纺织科学与工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0821Z5",
+      "majorName": "非织造材料与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0821",
+      "disciplineName": "纺织科学与工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "082200",
+      "majorName": "轻工技术与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0822",
+      "disciplineName": "轻工技术与工程",
+      "offeringCount": 17
+    },
+    {
+      "majorCode": "082201",
+      "majorName": "制浆造纸工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0822",
+      "disciplineName": "轻工技术与工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "082202",
+      "majorName": "制糖工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0822",
+      "disciplineName": "轻工技术与工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "082203",
+      "majorName": "发酵工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0822",
+      "disciplineName": "轻工技术与工程",
+      "offeringCount": 2
+    },
+    {
+      "majorCode": "0822J1",
+      "majorName": "监管科学",
+      "degreeType": "学术学位",
+      "disciplineCode": "0822",
+      "disciplineName": "轻工技术与工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0822Z1",
+      "majorName": "生物质能源与材料",
+      "degreeType": "学术学位",
+      "disciplineCode": "0822",
+      "disciplineName": "轻工技术与工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0822Z3",
+      "majorName": "生物质化学与材料工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0822",
+      "disciplineName": "轻工技术与工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0823J4",
+      "majorName": "低空技术与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0823",
+      "disciplineName": "交通运输工程",
+      "offeringCount": 2
+    },
+    {
+      "majorCode": "082400",
+      "majorName": "船舶与海洋工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0824",
+      "disciplineName": "船舶与海洋工程",
+      "offeringCount": 24
+    },
+    {
+      "majorCode": "082401",
+      "majorName": "船舶与海洋结构物设计制造",
+      "degreeType": "学术学位",
+      "disciplineCode": "0824",
+      "disciplineName": "船舶与海洋工程",
+      "offeringCount": 12
+    },
+    {
+      "majorCode": "082402",
+      "majorName": "轮机工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0824",
+      "disciplineName": "船舶与海洋工程",
+      "offeringCount": 11
+    },
+    {
+      "majorCode": "082403",
+      "majorName": "水声工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0824",
+      "disciplineName": "船舶与海洋工程",
+      "offeringCount": 7
+    },
+    {
+      "majorCode": "0824J1",
+      "majorName": "海洋技术与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0824",
+      "disciplineName": "船舶与海洋工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0824J4",
+      "majorName": "极地装备技术与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0824",
+      "disciplineName": "船舶与海洋工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0824Z1",
+      "majorName": "船舶与海洋工程材料",
+      "degreeType": "学术学位",
+      "disciplineCode": "0824",
+      "disciplineName": "船舶与海洋工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0824Z2",
+      "majorName": "救助与打捞工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0824",
+      "disciplineName": "船舶与海洋工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "082500",
+      "majorName": "航空宇航科学与技术",
+      "degreeType": "学术学位",
+      "disciplineCode": "0825",
+      "disciplineName": "航空宇航科学与技术",
+      "offeringCount": 48
+    },
+    {
+      "majorCode": "082501",
+      "majorName": "飞行器设计",
+      "degreeType": "学术学位",
+      "disciplineCode": "0825",
+      "disciplineName": "航空宇航科学与技术",
+      "offeringCount": 11
+    },
+    {
+      "majorCode": "082502",
+      "majorName": "航空宇航推进理论与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0825",
+      "disciplineName": "航空宇航科学与技术",
+      "offeringCount": 11
+    },
+    {
+      "majorCode": "082503",
+      "majorName": "航空宇航制造工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0825",
+      "disciplineName": "航空宇航科学与技术",
+      "offeringCount": 5
+    },
+    {
+      "majorCode": "082504",
+      "majorName": "人机与环境工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0825",
+      "disciplineName": "航空宇航科学与技术",
+      "offeringCount": 4
+    },
+    {
+      "majorCode": "0825J1",
+      "majorName": "低空技术与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0825",
+      "disciplineName": "航空宇航科学与技术",
+      "offeringCount": 2
+    },
+    {
+      "majorCode": "0825J2",
+      "majorName": "低空经济",
+      "degreeType": "学术学位",
+      "disciplineCode": "0825",
+      "disciplineName": "航空宇航科学与技术",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0825Z1",
+      "majorName": "航空噪声与振动工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0825",
+      "disciplineName": "航空宇航科学与技术",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "082600",
+      "majorName": "兵器科学与技术",
+      "degreeType": "学术学位",
+      "disciplineCode": "0826",
+      "disciplineName": "兵器科学与技术",
+      "offeringCount": 16
+    },
+    {
+      "majorCode": "082601",
+      "majorName": "武器系统与运用工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0826",
+      "disciplineName": "兵器科学与技术",
+      "offeringCount": 6
+    },
+    {
+      "majorCode": "082602",
+      "majorName": "兵器发射理论与技术",
+      "degreeType": "学术学位",
+      "disciplineCode": "0826",
+      "disciplineName": "兵器科学与技术",
+      "offeringCount": 4
+    },
+    {
+      "majorCode": "082603",
+      "majorName": "火炮、自动武器与弹药工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0826",
+      "disciplineName": "兵器科学与技术",
+      "offeringCount": 3
+    },
+    {
+      "majorCode": "082604",
+      "majorName": "军事化学与烟火技术",
+      "degreeType": "学术学位",
+      "disciplineCode": "0826",
+      "disciplineName": "兵器科学与技术",
+      "offeringCount": 3
+    },
+    {
+      "majorCode": "0826J1",
+      "majorName": "兵器智能技术",
+      "degreeType": "学术学位",
+      "disciplineCode": "0826",
+      "disciplineName": "兵器科学与技术",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0826Z1",
+      "majorName": "军用功能材料",
+      "degreeType": "学术学位",
+      "disciplineCode": "0826",
+      "disciplineName": "兵器科学与技术",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0826Z2",
+      "majorName": "国防教育工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0826",
+      "disciplineName": "兵器科学与技术",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "082700",
+      "majorName": "核科学与技术",
+      "degreeType": "学术学位",
+      "disciplineCode": "0827",
+      "disciplineName": "核科学与技术",
+      "offeringCount": 27
+    },
+    {
+      "majorCode": "082701",
+      "majorName": "核能科学与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0827",
+      "disciplineName": "核科学与技术",
+      "offeringCount": 7
+    },
+    {
+      "majorCode": "082702",
+      "majorName": "核燃料循环与材料",
+      "degreeType": "学术学位",
+      "disciplineCode": "0827",
+      "disciplineName": "核科学与技术",
+      "offeringCount": 6
+    },
+    {
+      "majorCode": "082703",
+      "majorName": "核技术及应用",
+      "degreeType": "学术学位",
+      "disciplineCode": "0827",
+      "disciplineName": "核科学与技术",
+      "offeringCount": 6
+    },
+    {
+      "majorCode": "082704",
+      "majorName": "辐射防护及环境保护",
+      "degreeType": "学术学位",
+      "disciplineCode": "0827",
+      "disciplineName": "核科学与技术",
+      "offeringCount": 6
+    },
+    {
+      "majorCode": "0827Z5",
+      "majorName": "脉冲功率技术及应用",
+      "degreeType": "学术学位",
+      "disciplineCode": "0827",
+      "disciplineName": "核科学与技术",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "082800",
+      "majorName": "农业工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0828",
+      "disciplineName": "农业工程",
+      "offeringCount": 20
+    },
+    {
+      "majorCode": "082801",
+      "majorName": "农业机械化工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0828",
+      "disciplineName": "农业工程",
+      "offeringCount": 25
+    },
+    {
+      "majorCode": "082802",
+      "majorName": "农业水土工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0828",
+      "disciplineName": "农业工程",
+      "offeringCount": 19
+    },
+    {
+      "majorCode": "082803",
+      "majorName": "农业生物环境与能源工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0828",
+      "disciplineName": "农业工程",
+      "offeringCount": 19
+    },
+    {
+      "majorCode": "082804",
+      "majorName": "农业电气化与自动化",
+      "degreeType": "学术学位",
+      "disciplineCode": "0828",
+      "disciplineName": "农业工程",
+      "offeringCount": 23
+    },
+    {
+      "majorCode": "0828J1",
+      "majorName": "城乡建设工程与管理",
+      "degreeType": "学术学位",
+      "disciplineCode": "0828",
+      "disciplineName": "农业工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0828J2",
+      "majorName": "智慧农业",
+      "degreeType": "学术学位",
+      "disciplineCode": "0828",
+      "disciplineName": "农业工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "082900",
+      "majorName": "林业工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0829",
+      "disciplineName": "林业工程",
+      "offeringCount": 6
+    },
+    {
+      "majorCode": "082901",
+      "majorName": "森林工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0829",
+      "disciplineName": "林业工程",
+      "offeringCount": 4
+    },
+    {
+      "majorCode": "082902",
+      "majorName": "木材科学与技术",
+      "degreeType": "学术学位",
+      "disciplineCode": "0829",
+      "disciplineName": "林业工程",
+      "offeringCount": 7
+    },
+    {
+      "majorCode": "082903",
+      "majorName": "林产化学加工工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0829",
+      "disciplineName": "林业工程",
+      "offeringCount": 7
+    },
+    {
+      "majorCode": "0829J1",
+      "majorName": "森林防火",
+      "degreeType": "学术学位",
+      "disciplineCode": "0829",
+      "disciplineName": "林业工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0829J2",
+      "majorName": "家居智能设计与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0829",
+      "disciplineName": "林业工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0829J5",
+      "majorName": "家具设计与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0829",
+      "disciplineName": "林业工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0829J6",
+      "majorName": "低空技术与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0829",
+      "disciplineName": "林业工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "083001",
+      "majorName": "环境科学",
+      "degreeType": "学术学位",
+      "disciplineCode": "0830",
+      "disciplineName": "环境科学与工程",
+      "offeringCount": 27
+    },
+    {
+      "majorCode": "083002",
+      "majorName": "环境工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0830",
+      "disciplineName": "环境科学与工程",
+      "offeringCount": 32
+    },
+    {
+      "majorCode": "0830J1",
+      "majorName": "环境法医学",
+      "degreeType": "学术学位",
+      "disciplineCode": "0830",
+      "disciplineName": "环境科学与工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0830J2",
+      "majorName": "环境科学与新能源技术",
+      "degreeType": "学术学位",
+      "disciplineCode": "0830",
+      "disciplineName": "环境科学与工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0830J3",
+      "majorName": "海洋事务",
+      "degreeType": "学术学位",
+      "disciplineCode": "0830",
+      "disciplineName": "环境科学与工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0831J4",
+      "majorName": "精准医学与公共健康",
+      "degreeType": "学术学位",
+      "disciplineCode": "0831",
+      "disciplineName": "生物医学工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0831Z1",
+      "majorName": "电子信息技术及仪器",
+      "degreeType": "学术学位",
+      "disciplineCode": "0831",
+      "disciplineName": "生物医学工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0831Z2",
+      "majorName": "智能医学工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0831",
+      "disciplineName": "生物医学工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "083200",
+      "majorName": "食品科学与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0832",
+      "disciplineName": "食品科学与工程",
+      "offeringCount": 97
+    },
+    {
+      "majorCode": "083201",
+      "majorName": "食品科学",
+      "degreeType": "学术学位",
+      "disciplineCode": "0832",
+      "disciplineName": "食品科学与工程",
+      "offeringCount": 13
+    },
+    {
+      "majorCode": "083202",
+      "majorName": "粮食、油脂及植物蛋白工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0832",
+      "disciplineName": "食品科学与工程",
+      "offeringCount": 6
+    },
+    {
+      "majorCode": "083203",
+      "majorName": "农产品加工及贮藏工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0832",
+      "disciplineName": "食品科学与工程",
+      "offeringCount": 8
+    },
+    {
+      "majorCode": "083204",
+      "majorName": "水产品加工及贮藏工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0832",
+      "disciplineName": "食品科学与工程",
+      "offeringCount": 2
+    },
+    {
+      "majorCode": "0832J1",
+      "majorName": "低空技术与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0832",
+      "disciplineName": "食品科学与工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0832J2",
+      "majorName": "绿色储备科学与技术",
+      "degreeType": "学术学位",
+      "disciplineCode": "0832",
+      "disciplineName": "食品科学与工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0835J1",
+      "majorName": "人工智能",
+      "degreeType": "学术学位",
+      "disciplineCode": "0835",
+      "disciplineName": "软件工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0835J2",
+      "majorName": "人工智能",
+      "degreeType": "学术学位",
+      "disciplineCode": "0835",
+      "disciplineName": "软件工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0835J4",
+      "majorName": "人工智能与绿色制造",
+      "degreeType": "学术学位",
+      "disciplineCode": "0835",
+      "disciplineName": "软件工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0835Z1",
+      "majorName": "大数据与数据科学",
+      "degreeType": "学术学位",
+      "disciplineCode": "0835",
+      "disciplineName": "软件工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "083600",
+      "majorName": "生物工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0836",
+      "disciplineName": "生物工程",
+      "offeringCount": 30
+    },
+    {
+      "majorCode": "0837J1",
+      "majorName": "低空技术与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0837",
+      "disciplineName": "安全科学与工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0837J2",
+      "majorName": "低空技术与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0837",
+      "disciplineName": "安全科学与工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0837J5",
+      "majorName": "生态环境安全",
+      "degreeType": "学术学位",
+      "disciplineCode": "0837",
+      "disciplineName": "安全科学与工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0837J6",
+      "majorName": "职业安全健康",
+      "degreeType": "学术学位",
+      "disciplineCode": "0837",
+      "disciplineName": "安全科学与工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "083800",
+      "majorName": "公安技术",
+      "degreeType": "学术学位",
+      "disciplineCode": "0838",
+      "disciplineName": "公安技术",
+      "offeringCount": 3
+    },
+    {
+      "majorCode": "0838Z1",
+      "majorName": "刑事科学技术",
+      "degreeType": "学术学位",
+      "disciplineCode": "0838",
+      "disciplineName": "公安技术",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0838Z2",
+      "majorName": "安全防范工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0838",
+      "disciplineName": "公安技术",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0838Z3",
+      "majorName": "交通管理工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0838",
+      "disciplineName": "公安技术",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0838Z4",
+      "majorName": "网络空间安全执法技术",
+      "degreeType": "学术学位",
+      "disciplineCode": "0838",
+      "disciplineName": "公安技术",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0839Z1",
+      "majorName": "人工智能",
+      "degreeType": "学术学位",
+      "disciplineCode": "0839",
+      "disciplineName": "网络空间安全",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "085400",
+      "majorName": "电子信息",
+      "degreeType": "专业学位",
+      "disciplineCode": "0854",
+      "disciplineName": "电子信息",
+      "offeringCount": 229
+    },
+    {
+      "majorCode": "085503",
+      "majorName": "航空工程",
+      "degreeType": "专业学位",
+      "disciplineCode": "0855",
+      "disciplineName": "机械",
+      "offeringCount": 20
+    },
+    {
+      "majorCode": "085504",
+      "majorName": "航天工程",
+      "degreeType": "专业学位",
+      "disciplineCode": "0855",
+      "disciplineName": "机械",
+      "offeringCount": 13
+    },
+    {
+      "majorCode": "085505",
+      "majorName": "船舶工程",
+      "degreeType": "专业学位",
+      "disciplineCode": "0855",
+      "disciplineName": "机械",
+      "offeringCount": 13
+    },
+    {
+      "majorCode": "085506",
+      "majorName": "兵器工程",
+      "degreeType": "专业学位",
+      "disciplineCode": "0855",
+      "disciplineName": "机械",
+      "offeringCount": 7
+    },
+    {
+      "majorCode": "085508",
+      "majorName": "农机装备工程",
+      "degreeType": "专业学位",
+      "disciplineCode": "0855",
+      "disciplineName": "机械",
+      "offeringCount": 11
+    },
+    {
+      "majorCode": "085602",
+      "majorName": "化学工程",
+      "degreeType": "专业学位",
+      "disciplineCode": "0856",
+      "disciplineName": "材料与化工",
+      "offeringCount": 132
+    },
+    {
+      "majorCode": "085603",
+      "majorName": "冶金工程",
+      "degreeType": "专业学位",
+      "disciplineCode": "0856",
+      "disciplineName": "材料与化工",
+      "offeringCount": 17
+    },
+    {
+      "majorCode": "085604",
+      "majorName": "纺织工程",
+      "degreeType": "专业学位",
+      "disciplineCode": "0856",
+      "disciplineName": "材料与化工",
+      "offeringCount": 16
+    },
+    {
+      "majorCode": "085605",
+      "majorName": "林业工程",
+      "degreeType": "专业学位",
+      "disciplineCode": "0856",
+      "disciplineName": "材料与化工",
+      "offeringCount": 5
+    },
+    {
+      "majorCode": "085606",
+      "majorName": "轻化工程（含皮革、纸张、织物加工等）",
+      "degreeType": "专业学位",
+      "disciplineCode": "0856",
+      "disciplineName": "材料与化工",
+      "offeringCount": 11
+    },
+    {
+      "majorCode": "085700",
+      "majorName": "资源与环境",
+      "degreeType": "专业学位",
+      "disciplineCode": "0857",
+      "disciplineName": "资源与环境",
+      "offeringCount": 192
+    },
+    {
+      "majorCode": "085702",
+      "majorName": "安全工程",
+      "degreeType": "专业学位",
+      "disciplineCode": "0857",
+      "disciplineName": "资源与环境",
+      "offeringCount": 79
+    },
+    {
+      "majorCode": "085703",
+      "majorName": "地质工程",
+      "degreeType": "专业学位",
+      "disciplineCode": "0857",
+      "disciplineName": "资源与环境",
+      "offeringCount": 50
+    },
+    {
+      "majorCode": "085704",
+      "majorName": "测绘工程",
+      "degreeType": "专业学位",
+      "disciplineCode": "0857",
+      "disciplineName": "资源与环境",
+      "offeringCount": 77
+    },
+    {
+      "majorCode": "085705",
+      "majorName": "矿业工程",
+      "degreeType": "专业学位",
+      "disciplineCode": "0857",
+      "disciplineName": "资源与环境",
+      "offeringCount": 29
+    },
+    {
+      "majorCode": "085706",
+      "majorName": "石油与天然气工程",
+      "degreeType": "专业学位",
+      "disciplineCode": "0857",
+      "disciplineName": "资源与环境",
+      "offeringCount": 16
+    },
+    {
+      "majorCode": "085802",
+      "majorName": "动力工程",
+      "degreeType": "专业学位",
+      "disciplineCode": "0858",
+      "disciplineName": "能源动力",
+      "offeringCount": 83
+    },
+    {
+      "majorCode": "085803",
+      "majorName": "核能工程",
+      "degreeType": "专业学位",
+      "disciplineCode": "0858",
+      "disciplineName": "能源动力",
+      "offeringCount": 15
+    },
+    {
+      "majorCode": "085804",
+      "majorName": "航空发动机工程",
+      "degreeType": "专业学位",
+      "disciplineCode": "0858",
+      "disciplineName": "能源动力",
+      "offeringCount": 4
+    },
+    {
+      "majorCode": "085805",
+      "majorName": "燃气轮机工程",
+      "degreeType": "专业学位",
+      "disciplineCode": "0858",
+      "disciplineName": "能源动力",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "085806",
+      "majorName": "航天动力工程",
+      "degreeType": "专业学位",
+      "disciplineCode": "0858",
+      "disciplineName": "能源动力",
+      "offeringCount": 4
+    },
+    {
+      "majorCode": "085807",
+      "majorName": "清洁能源技术",
+      "degreeType": "专业学位",
+      "disciplineCode": "0858",
+      "disciplineName": "能源动力",
+      "offeringCount": 42
+    },
+    {
+      "majorCode": "085808",
+      "majorName": "储能技术",
+      "degreeType": "专业学位",
+      "disciplineCode": "0858",
+      "disciplineName": "能源动力",
+      "offeringCount": 41
+    },
+    {
+      "majorCode": "085902",
+      "majorName": "水利工程",
+      "degreeType": "专业学位",
+      "disciplineCode": "0859",
+      "disciplineName": "土木水利",
+      "offeringCount": 59
+    },
+    {
+      "majorCode": "085903",
+      "majorName": "海洋工程",
+      "degreeType": "专业学位",
+      "disciplineCode": "0859",
+      "disciplineName": "土木水利",
+      "offeringCount": 9
+    },
+    {
+      "majorCode": "085904",
+      "majorName": "农田水土工程",
+      "degreeType": "专业学位",
+      "disciplineCode": "0859",
+      "disciplineName": "土木水利",
+      "offeringCount": 9
+    },
+    {
+      "majorCode": "085905",
+      "majorName": "市政工程（含给排水等）",
+      "degreeType": "专业学位",
+      "disciplineCode": "0859",
+      "disciplineName": "土木水利",
+      "offeringCount": 58
+    },
+    {
+      "majorCode": "085906",
+      "majorName": "人工环境工程（含供热、通风及空调等）",
+      "degreeType": "专业学位",
+      "disciplineCode": "0859",
+      "disciplineName": "土木水利",
+      "offeringCount": 51
+    },
+    {
+      "majorCode": "086001",
+      "majorName": "生物技术与工程",
+      "degreeType": "专业学位",
+      "disciplineCode": "0860",
+      "disciplineName": "生物与医药",
+      "offeringCount": 95
+    },
+    {
+      "majorCode": "086002",
+      "majorName": "制药工程",
+      "degreeType": "专业学位",
+      "disciplineCode": "0860",
+      "disciplineName": "生物与医药",
+      "offeringCount": 66
+    },
+    {
+      "majorCode": "086003",
+      "majorName": "食品工程",
+      "degreeType": "专业学位",
+      "disciplineCode": "0860",
+      "disciplineName": "生物与医药",
+      "offeringCount": 61
+    },
+    {
+      "majorCode": "086004",
+      "majorName": "发酵工程",
+      "degreeType": "专业学位",
+      "disciplineCode": "0860",
+      "disciplineName": "生物与医药",
+      "offeringCount": 21
+    },
+    {
+      "majorCode": "086101",
+      "majorName": "轨道交通运输",
+      "degreeType": "专业学位",
+      "disciplineCode": "0861",
+      "disciplineName": "交通运输",
+      "offeringCount": 7
+    },
+    {
+      "majorCode": "086102",
+      "majorName": "道路交通运输",
+      "degreeType": "专业学位",
+      "disciplineCode": "0861",
+      "disciplineName": "交通运输",
+      "offeringCount": 21
+    },
+    {
+      "majorCode": "086103",
+      "majorName": "水路交通运输",
+      "degreeType": "专业学位",
+      "disciplineCode": "0861",
+      "disciplineName": "交通运输",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "086104",
+      "majorName": "航空交通运输",
+      "degreeType": "专业学位",
+      "disciplineCode": "0861",
+      "disciplineName": "交通运输",
+      "offeringCount": 8
+    },
+    {
+      "majorCode": "086200",
+      "majorName": "风景园林",
+      "degreeType": "专业学位",
+      "disciplineCode": "0862",
+      "disciplineName": "风景园林",
+      "offeringCount": 106
+    },
+    {
+      "majorCode": "087100",
+      "majorName": "管理科学与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0871",
+      "disciplineName": "管理科学与工程",
+      "offeringCount": 41
+    },
+    {
+      "majorCode": "0871J2",
+      "majorName": "流通工程与技术管理",
+      "degreeType": "学术学位",
+      "disciplineCode": "0871",
+      "disciplineName": "管理科学与工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0871J3",
+      "majorName": "教育信息技术",
+      "degreeType": "学术学位",
+      "disciplineCode": "0871",
+      "disciplineName": "管理科学与工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0871J6",
+      "majorName": "大数据管理与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0871",
+      "disciplineName": "管理科学与工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0871Z1",
+      "majorName": "物流工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0871",
+      "disciplineName": "管理科学与工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "0871Z2",
+      "majorName": "物流工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0871",
+      "disciplineName": "管理科学与工程",
+      "offeringCount": 1
+    },
+    {
+      "majorCode": "087200",
+      "majorName": "设计学",
+      "degreeType": "学术学位",
+      "disciplineCode": "0872",
+      "disciplineName": "设计学",
+      "offeringCount": 7
+    },
+    {
+      "majorCode": "087300",
+      "majorName": "集成电路科学与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0873",
+      "disciplineName": "集成电路科学与工程",
+      "offeringCount": 5
+    },
+    {
+      "majorCode": "087600",
+      "majorName": "智能科学与技术",
+      "degreeType": "学术学位",
+      "disciplineCode": "0876",
+      "disciplineName": "智能科学与技术",
+      "offeringCount": 2
+    },
+    {
+      "majorCode": "089901",
+      "majorName": "低空技术与工程",
+      "degreeType": "学术学位",
+      "disciplineCode": "0899",
+      "disciplineName": "",
+      "offeringCount": 4
+    }
+  ]
+}
