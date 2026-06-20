@@ -1,0 +1,38 @@
+{
+  "majorCode": "0810J1",
+  "majorName": "低空技术与工程",
+  "degreeType": "学术学位",
+  "categoryCode": "08",
+  "categoryName": "工学",
+  "disciplineCode": "0810",
+  "disciplineName": "信息与通信工程",
+  "updatedAt": "2026-06-19 11:25:34",
+  "lineType": "复试线（初试门槛）",
+  "source": "学校研究生招生官网复试线抓取",
+  "lines": [
+    {
+      "year": 2026,
+      "schoolCode": "10004",
+      "schoolName": "北京交通大学",
+      "provinceName": "北京",
+      "collegeCode": "001",
+      "collegeName": "电子信息工程学院",
+      "majorCode": "0810J1",
+      "majorName": "低空技术与工程",
+      "degreeType": "",
+      "studyMode": "全日制",
+      "lineType": "复试线（初试门槛）",
+      "totalScore": 318,
+      "politics": null,
+      "foreignLanguage": null,
+      "business1": null,
+      "business2": null,
+      "singleSubject100": 35,
+      "singleSubjectGt100": 53,
+      "notes": "",
+      "sourceTitle": "北京交通大学2026年硕士研究生招生复试分数线",
+      "sourceUrl": "https://yzb.bjtu.edu.cn/sszs/537f8eb85d004e9d81bb09eaf3f9e03f.htm",
+      "confidence": "high"
+    }
+  ]
+}

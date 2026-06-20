@@ -1,0 +1,3902 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>全国考研招生单位省份明细</title>
+  <style>
+    :root {
+      --bg: #f3f4ed;
+      --paper: #ffffff;
+      --paper-soft: #f8faf6;
+      --ink: #18232d;
+      --muted: #69747d;
+      --line: #dce3dc;
+      --blue: #245bb8;
+      --red: #b64639;
+      --green: #187760;
+      --gold: #aa7517;
+      --teal: #1b7f8c;
+      --violet: #6a589f;
+      --shadow: 0 12px 28px rgba(34, 49, 44, 0.075);
+      --shadow-soft: 0 8px 18px rgba(34, 49, 44, 0.055);
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.82), transparent 270px),
+        linear-gradient(115deg, rgba(24, 119, 96, 0.08), transparent 38%),
+        linear-gradient(280deg, rgba(170, 117, 23, 0.08), transparent 34%),
+        var(--bg);
+      font-family: "Noto Sans CJK SC", "Microsoft YaHei", "PingFang SC", sans-serif;
+      letter-spacing: 0;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(24, 35, 45, 0.028) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(24, 35, 45, 0.028) 1px, transparent 1px);
+      background-size: 28px 28px;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.11), transparent 58%);
+    }
+
+    button,
+    input,
+    select {
+      font: inherit;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      padding-bottom: 28px;
+      overflow-x: clip;
+    }
+
+    .container {
+      width: min(1380px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding: 14px 0 8px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(14px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: linear-gradient(145deg, #17232d, #1d6c5a);
+      box-shadow: var(--shadow-soft);
+      font: 700 22px/1 "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+      flex: none;
+    }
+
+    .eyebrow {
+      margin: 0 0 4px;
+      color: var(--blue);
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
+    h1,
+    h2,
+    h3,
+    .num {
+      margin: 0;
+      font-family: "Noto Sans CJK SC", "Microsoft YaHei", "PingFang SC", sans-serif;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      font-size: 1.28rem;
+      line-height: 1.16;
+    }
+
+    .top-actions,
+    .toolbar,
+    .chips,
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .btn,
+    .link-btn {
+      appearance: none;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--ink);
+      padding: 9px 12px;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      line-height: 1;
+      box-shadow: var(--shadow-soft);
+      transition: transform 150ms ease, border-color 150ms ease, background 150ms ease;
+      white-space: nowrap;
+    }
+
+    .btn:hover,
+    .link-btn:hover {
+      transform: translateY(-1px);
+      border-color: rgba(36, 95, 193, 0.42);
+      background: #fff;
+    }
+
+    .btn.primary {
+      color: #fff;
+      background: linear-gradient(145deg, #173047, var(--blue));
+      border-color: transparent;
+    }
+
+    .hero {
+      padding-top: 8px;
+    }
+
+    .hero-panel {
+      border-radius: var(--radius);
+      color: var(--ink);
+      background:
+        linear-gradient(120deg, rgba(36, 91, 184, 0.1), transparent 44%),
+        linear-gradient(300deg, rgba(24, 119, 96, 0.1), transparent 38%),
+        var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      padding: 16px;
+      min-height: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-panel::after {
+      content: none;
+    }
+
+    .hero-panel > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.88fr) minmax(420px, 1.12fr);
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .hero-grid > * {
+      min-width: 0;
+    }
+
+    .hero-panel h2 {
+      margin-top: 12px;
+      max-width: 19ch;
+      font-size: 2rem;
+      line-height: 1.08;
+    }
+
+    .hero-panel p {
+      max-width: 60ch;
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .source-line {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      max-width: 100%;
+      min-width: 0;
+      border-radius: 999px;
+      padding: 8px 11px;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(36, 91, 184, 0.2);
+      color: var(--blue);
+      font-size: 0.86rem;
+    }
+
+    .source-line span:last-child {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 0 5px rgba(20, 115, 87, 0.18);
+      flex: none;
+    }
+
+    .hero-chart {
+      min-height: 172px;
+      min-width: 0;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.72);
+      padding: 14px;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.82);
+    }
+
+    .hero-chart h3 {
+      font-size: 1.02rem;
+      margin-bottom: 13px;
+    }
+
+    .top-province-bars {
+      display: grid;
+      gap: 9px;
+    }
+
+    .bar-row {
+      appearance: none;
+      width: 100%;
+      border: 0;
+      background: transparent;
+      padding: 0;
+      display: grid;
+      grid-template-columns: minmax(48px, 76px) minmax(0, 1fr) minmax(34px, 44px);
+      align-items: center;
+      gap: 9px;
+      color: var(--ink);
+      font-size: 0.88rem;
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .bar-row strong {
+      text-align: right;
+    }
+
+    .bar-row:hover .bar-track,
+    .bar-row.active .bar-track {
+      background: #cbd7e1;
+    }
+
+    .bar-row:focus-visible {
+      outline: 2px solid rgba(29, 95, 191, 0.34);
+      outline-offset: 3px;
+    }
+
+    .bar-track {
+      display: block;
+      height: 9px;
+      border-radius: 999px;
+      background: #e3e9e2;
+      overflow: hidden;
+    }
+
+    .bar-track span {
+      display: block;
+      height: 100%;
+      width: calc(var(--w) * 1%);
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--accent), var(--green));
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      padding-top: 10px;
+    }
+
+    .stat {
+      appearance: none;
+      color: var(--ink);
+      font: inherit;
+      text-align: left;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: var(--shadow-soft);
+      min-height: 88px;
+      padding: 13px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+    }
+
+    .stat:hover,
+    .stat.active {
+      transform: translateY(-1px);
+      border-color: rgba(36, 95, 193, 0.48);
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .stat:focus-visible {
+      outline: 3px solid rgba(36, 95, 193, 0.22);
+      outline-offset: 2px;
+    }
+
+    .stat::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      width: 100%;
+      height: 4px;
+      border-radius: 0;
+      background: var(--accent, var(--blue));
+      opacity: 0.72;
+    }
+
+    .stat .label {
+      display: block;
+      color: var(--muted);
+      font-size: 0.86rem;
+      margin-bottom: 9px;
+    }
+
+    .stat .num {
+      display: block;
+      font-size: 1.72rem;
+      line-height: 1;
+    }
+
+    .stat .sub {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.84rem;
+      line-height: 1.45;
+    }
+
+    .btn:disabled {
+      cursor: not-allowed;
+      opacity: 0.48;
+      transform: none;
+    }
+
+    .major-filter-band,
+    .filters {
+      padding-top: 16px;
+    }
+
+    .major-filter-panel {
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(330px, 420px);
+      grid-template-areas:
+        "majorHead score"
+        "majorControls score"
+        "majorMeta score"
+        "target score";
+      gap: 14px 18px;
+      padding: 16px;
+      backdrop-filter: blur(10px);
+    }
+
+    .major-filter-head {
+      grid-area: majorHead;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .major-filter-head h3 {
+      margin: 0;
+      font-size: 1.12rem;
+    }
+
+    .major-filter-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.55;
+    }
+
+    .major-filter-controls {
+      grid-area: majorControls;
+      display: grid;
+      grid-template-columns:
+        minmax(170px, 1fr)
+        minmax(170px, 1fr)
+        minmax(260px, 1.45fr)
+        minmax(190px, 1.05fr);
+      gap: 10px;
+      align-items: end;
+    }
+
+    .filter-panel {
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.86);
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      grid-template-columns:
+        minmax(220px, 1.35fr)
+        repeat(5, minmax(112px, 0.72fr))
+        auto;
+      gap: 10px;
+      padding: 12px;
+      align-items: center;
+    }
+
+    .field {
+      min-width: 0;
+    }
+
+    .field label {
+      display: block;
+      margin: 0 0 6px;
+      color: #4d5b67;
+      font-size: 0.78rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .field input,
+    .field select {
+      width: 100%;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.96);
+      color: var(--ink);
+      padding: 0 12px;
+      outline: none;
+    }
+
+    .field input:focus,
+    .field select:focus {
+      border-color: rgba(36, 95, 193, 0.52);
+      box-shadow: 0 0 0 4px rgba(36, 95, 193, 0.12);
+    }
+
+    .field select:disabled {
+      color: #8a8f86;
+      background: #f1f2ee;
+      cursor: not-allowed;
+    }
+
+    .major-search-meta {
+      grid-area: majorMeta;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      min-height: 27px;
+      color: var(--muted);
+      font-size: 0.84rem;
+      line-height: 1.45;
+    }
+
+    .score-advisor {
+      grid-area: score;
+      border: 1px solid rgba(36, 91, 184, 0.14);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(135deg, rgba(36, 91, 184, 0.07), transparent 42%),
+        rgba(248, 250, 246, 0.9);
+      padding: 13px;
+      display: grid;
+      gap: 11px;
+      align-self: stretch;
+    }
+
+    .score-advisor-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .score-advisor-head h4 {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .score-advisor-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.84rem;
+      line-height: 1.5;
+    }
+
+    .score-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .score-input-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      align-items: end;
+    }
+
+    .score-input-grid .field:first-child {
+      grid-column: 1 / -1;
+    }
+
+    .score-summary {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      min-height: 27px;
+      color: var(--ink);
+      font-size: 0.84rem;
+      line-height: 1.45;
+    }
+
+    .target-wall {
+      grid-area: target;
+      border: 1px solid rgba(24, 119, 96, 0.24);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(135deg, rgba(24, 119, 96, 0.12), transparent 46%),
+        linear-gradient(315deg, rgba(170, 117, 23, 0.08), transparent 38%),
+        rgba(255, 255, 255, 0.92);
+      box-shadow: 0 14px 30px rgba(24, 119, 96, 0.08);
+      padding: 14px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .target-wall-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .target-wall-head h4 {
+      margin: 0;
+      font-size: 1.08rem;
+      color: #15372f;
+    }
+
+    .target-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .target-input-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 10px;
+      align-items: end;
+    }
+
+    .target-wall-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .target-card {
+      min-height: 84px;
+      border: 1px solid #dfe8df;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.88);
+      padding: 10px;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.84);
+    }
+
+    .target-card .label {
+      color: var(--muted);
+      display: block;
+      font-size: 0.76rem;
+      font-weight: 800;
+      margin-bottom: 7px;
+    }
+
+    .target-card strong {
+      display: block;
+      font-size: 1.08rem;
+      line-height: 1.24;
+    }
+
+    .target-card p {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.45;
+    }
+
+    .target-task-list {
+      display: grid;
+      gap: 7px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .target-task-list li {
+      border-left: 3px solid rgba(29, 95, 191, 0.58);
+      background: rgba(255, 255, 255, 0.76);
+      border-radius: 0 7px 7px 0;
+      color: #31404d;
+      font-size: 0.84rem;
+      line-height: 1.5;
+      padding: 7px 9px;
+    }
+
+    .target-message {
+      color: var(--muted);
+      font-size: 0.86rem;
+      line-height: 1.6;
+    }
+
+    .daily-task-headline {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      border-top: 1px solid rgba(24, 119, 96, 0.16);
+      padding: 12px 2px 0;
+    }
+
+    .daily-task-headline strong {
+      color: #19372f;
+      font-size: 1rem;
+    }
+
+    .daily-progress {
+      border-radius: 999px;
+      background: rgba(24, 119, 96, 0.1);
+      color: var(--green);
+      font-size: 0.84rem;
+      font-weight: 700;
+      padding: 5px 8px;
+    }
+
+    .daily-task-list {
+      display: grid;
+      gap: 9px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .daily-task-item {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      gap: 10px;
+      align-items: flex-start;
+      border: 1px solid #dfe8df;
+      border-left: 4px solid rgba(36, 91, 184, 0.72);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 11px;
+      cursor: pointer;
+      box-shadow: 0 8px 18px rgba(34, 49, 44, 0.04);
+      transition: background 140ms ease, border-color 140ms ease, opacity 140ms ease, transform 140ms ease;
+    }
+
+    .daily-task-item:hover {
+      background: #fff;
+      border-color: rgba(29, 95, 191, 0.28);
+      transform: translateY(-1px);
+    }
+
+    .daily-task-item.done {
+      opacity: 0.72;
+      background: #f2f7f4;
+      border-left-color: rgba(15, 118, 110, 0.72);
+      transform: none;
+    }
+
+    .daily-task-check {
+      width: 19px;
+      height: 19px;
+      margin-top: 2px;
+      accent-color: var(--green);
+      flex: none;
+    }
+
+    .daily-task-main {
+      min-width: 0;
+      display: grid;
+      gap: 5px;
+    }
+
+    .daily-task-main strong {
+      color: #25343d;
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+
+    .daily-task-item.done .daily-task-main strong {
+      text-decoration: line-through;
+      text-decoration-thickness: 1px;
+      text-decoration-color: rgba(15, 118, 110, 0.58);
+    }
+
+    .daily-task-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .custom-task-form {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(110px, 0.45fr) minmax(110px, 0.45fr) auto;
+      gap: 8px;
+      align-items: end;
+      border: 1px dashed rgba(15, 118, 110, 0.28);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 10px;
+    }
+
+    .task-delete-btn {
+      appearance: none;
+      border: 1px solid #e5c9c5;
+      border-radius: 7px;
+      background: #fff7f6;
+      color: var(--red);
+      cursor: pointer;
+      font-size: 0.78rem;
+      padding: 6px 8px;
+      white-space: nowrap;
+    }
+
+    .task-delete-btn:hover {
+      background: #ffecea;
+    }
+
+    .score-badge {
+      display: inline-grid;
+      gap: 4px;
+      min-width: 118px;
+      padding: 7px 9px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.84);
+      border: 1px solid #e4e9ee;
+    }
+
+    .score-badge strong {
+      font-size: 0.9rem;
+    }
+
+    .score-badge .code {
+      line-height: 1.45;
+    }
+
+    .score-badge.sprint strong,
+    .chip.sprint {
+      color: var(--gold);
+    }
+
+    .score-badge.sprint,
+    .chip.sprint {
+      background: rgba(163, 107, 0, 0.1);
+    }
+
+    .score-badge.stable strong,
+    .chip.stable {
+      color: var(--green);
+    }
+
+    .score-badge.stable,
+    .chip.stable {
+      background: rgba(15, 118, 110, 0.1);
+    }
+
+    .score-badge.safe strong,
+    .chip.safe {
+      color: var(--blue);
+    }
+
+    .score-badge.safe,
+    .chip.safe {
+      background: rgba(29, 95, 191, 0.1);
+    }
+
+    .score-badge.risk strong,
+    .chip.risk {
+      color: var(--red);
+    }
+
+    .score-badge.risk,
+    .chip.risk {
+      background: rgba(186, 63, 55, 0.1);
+    }
+
+    .score-badge.empty strong,
+    .chip.empty {
+      color: var(--muted);
+    }
+
+    .score-badge.empty,
+    .chip.empty {
+      background: #edf2f5;
+    }
+
+    .score-badge.estimated .code,
+    .chip.estimated {
+      color: var(--violet);
+    }
+
+    .chip.estimated {
+      background: rgba(97, 83, 166, 0.1);
+    }
+
+    .main {
+      padding-top: 14px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 300px minmax(0, 1fr);
+      gap: 16px;
+      align-items: start;
+      min-width: 0;
+    }
+
+    .province-list {
+      position: sticky;
+      top: 14px;
+      display: grid;
+      gap: 7px;
+      max-height: calc(100vh - 28px);
+      overflow: auto;
+      padding-right: 4px;
+    }
+
+    .province-button {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.82);
+      color: var(--ink);
+      padding: 10px 11px;
+      text-align: left;
+      cursor: pointer;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      align-items: center;
+      transition: border-color 140ms ease, background 140ms ease;
+    }
+
+    .province-button:hover,
+    .province-button.active {
+      border-color: rgba(36, 95, 193, 0.48);
+      background: #fff;
+      box-shadow: inset 3px 0 0 var(--blue), var(--shadow-soft);
+    }
+
+    .province-button strong {
+      font-size: 0.96rem;
+    }
+
+    .province-button span {
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    .province-meter {
+      grid-column: 1 / -1;
+      display: block;
+      height: 7px;
+      border-radius: 999px;
+      background: #e0e7df;
+      overflow: hidden;
+    }
+
+    .province-meter i {
+      display: block;
+      height: 100%;
+      width: calc(var(--w) * 1%);
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--blue), var(--green));
+    }
+
+    .content {
+      display: grid;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .section {
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: var(--shadow-soft);
+      padding: 14px;
+      min-width: 0;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
+      min-width: 0;
+    }
+
+    .section-head > div {
+      min-width: 0;
+    }
+
+    .section-head h3 {
+      font-size: 1.12rem;
+      margin-bottom: 4px;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.55;
+    }
+
+    .province-summary {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .mini-stat {
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: rgba(248, 250, 246, 0.9);
+      padding: 11px;
+      min-width: 0;
+    }
+
+    button.mini-stat {
+      appearance: none;
+      color: var(--ink);
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
+      transition: border-color 140ms ease, transform 140ms ease;
+    }
+
+    button.mini-stat:hover,
+    button.mini-stat.active {
+      transform: translateY(-1px);
+      border-color: rgba(36, 95, 193, 0.48);
+    }
+
+    button.mini-stat:focus-visible {
+      outline: 3px solid rgba(36, 95, 193, 0.18);
+      outline-offset: 2px;
+    }
+
+    .mini-stat .num {
+      display: block;
+      font-size: 1.32rem;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .mini-stat .txt {
+      display: block;
+      color: var(--muted);
+      font-size: 0.84rem;
+      line-height: 1.4;
+    }
+
+    .chips {
+      gap: 7px;
+    }
+
+    .chip {
+      border: 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 7px;
+      padding: 5px 8px;
+      background: #edf2ee;
+      color: #465461;
+      font-size: 0.78rem;
+      white-space: nowrap;
+    }
+
+    button.chip {
+      cursor: pointer;
+      font: inherit;
+    }
+
+    button.chip:hover,
+    .chip.active {
+      box-shadow: inset 0 0 0 1px currentColor;
+    }
+
+    .chip.blue {
+      background: rgba(36, 91, 184, 0.11);
+      color: var(--blue);
+    }
+
+    .chip.green {
+      background: rgba(24, 119, 96, 0.12);
+      color: var(--green);
+    }
+
+    .chip.red {
+      background: rgba(182, 65, 48, 0.12);
+      color: var(--red);
+    }
+
+    .table-wrap {
+      overflow: auto;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75), var(--shadow-soft);
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+    }
+
+    table {
+      width: 100%;
+      min-width: 980px;
+      border-collapse: collapse;
+    }
+
+    col.school-col {
+      width: 22%;
+    }
+
+    col.province-col {
+      width: 8%;
+    }
+
+    col.supervisor-col {
+      width: 15%;
+    }
+
+    col.tag-col {
+      width: 15%;
+    }
+
+    col.score-col {
+      width: 15%;
+    }
+
+    col.link-col {
+      width: 25%;
+    }
+
+    th,
+    td {
+      padding: 11px 10px;
+      border-bottom: 1px solid #eef2ee;
+      text-align: left;
+      vertical-align: top;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    th {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background: #f5f8f4;
+      color: #4d5b67;
+      font-weight: 700;
+      box-shadow: inset 0 -1px 0 var(--line);
+    }
+
+    tr {
+      cursor: pointer;
+    }
+
+    tbody tr:hover,
+    tbody tr.active {
+      background: #f5f9fc;
+      box-shadow: inset 3px 0 0 var(--blue);
+    }
+
+    .school-name {
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .code {
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .links a {
+      border-radius: 7px;
+      padding: 6px 8px;
+      background: #eef3ef;
+      color: var(--blue);
+      text-decoration: none;
+      font-size: 0.78rem;
+      white-space: nowrap;
+    }
+
+    .links a:hover {
+      background: rgba(29, 95, 191, 0.11);
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 16px;
+    }
+
+    .detail-block {
+      border-top: 1px solid var(--line);
+      padding: 12px 0 14px;
+    }
+
+    .detail-block h4 {
+      margin: 0 0 8px;
+      color: #3f4d59;
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+
+    .empty {
+      border: 1px dashed var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      color: var(--muted);
+      padding: 24px;
+      text-align: center;
+      line-height: 1.65;
+    }
+
+    .foot {
+      padding-top: 16px;
+    }
+
+    .foot-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .foot-box {
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.84);
+      box-shadow: 0 10px 24px rgba(28, 32, 26, 0.06);
+      padding: 15px;
+    }
+
+    .foot-box h3 {
+      font-size: 1.08rem;
+      margin-bottom: 9px;
+    }
+
+    .foot-box p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 0.9rem;
+    }
+
+    .foot-box a {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    @media (max-width: 1180px) {
+      .hero-grid,
+      .layout,
+      .foot-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .stats {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .major-filter-panel {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "majorHead"
+          "majorControls"
+          "majorMeta"
+          "target"
+          "score";
+      }
+
+      .province-list {
+        position: static;
+        max-height: none;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .major-filter-controls,
+      .filter-panel {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      .container {
+        width: calc(100% - 24px);
+        max-width: 1380px;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .hero-panel {
+        padding: 16px 10px;
+      }
+
+      .hero-panel h2 {
+        font-size: 1.82rem;
+      }
+
+      .source-line {
+        width: 100%;
+      }
+
+      .hero-chart {
+        padding: 12px 10px;
+      }
+
+      .bar-row {
+        grid-template-columns: 44px minmax(0, 1fr);
+        gap: 6px;
+        font-size: 0.86rem;
+      }
+
+      .bar-row strong {
+        display: none;
+      }
+
+      .stats,
+        .province-summary,
+        .province-list,
+        .major-filter-controls,
+        .target-wall-grid,
+        .target-input-row,
+        .custom-task-form,
+        .score-input-grid,
+        .filter-panel,
+        .detail-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .score-input-grid .field:first-child {
+        grid-column: auto;
+      }
+
+      .major-filter-head,
+      .score-advisor-head,
+      .section-head {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .top-actions,
+      .score-actions {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .target-wall-head,
+      .daily-task-headline {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .target-actions {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .daily-task-item {
+        grid-template-columns: auto minmax(0, 1fr);
+      }
+
+      .task-delete-btn {
+        grid-column: 2;
+        justify-self: start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar container">
+      <div class="brand">
+        <div class="mark">研</div>
+        <div>
+          <p class="eyebrow">研招网院校库抓取数据</p>
+          <h1>全国考研招生单位省份明细</h1>
+        </div>
+      </div>
+      <div class="top-actions">
+        <a class="link-btn" href="https://yz.chsi.com.cn/sch/" target="_blank" rel="noreferrer">院校库</a>
+        <a class="link-btn" href="https://yz.chsi.com.cn/zsml/" target="_blank" rel="noreferrer">硕士目录</a>
+        <button class="btn primary" id="exportBtn" type="button">导出 CSV</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-panel">
+          <div class="hero-grid">
+            <div>
+              <span class="source-line"><span class="dot"></span><span id="sourceLine">读取数据中</span></span>
+              <h2>考研择校工作台</h2>
+              <p>
+                汇总研招网院校库、专业目录和复试线参考，按专业、地区、院校层级和预估分数快速收敛学校范围。
+              </p>
+            </div>
+            <div class="hero-chart">
+              <h3>招生单位数量最多的省份</h3>
+              <div class="top-province-bars" id="topProvinceBars"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats container">
+        <button class="stat" style="--accent: var(--blue);" type="button" data-filter-action="reset">
+          <span class="label">招生单位</span>
+          <span class="num" id="totalUnits">--</span>
+          <span class="sub">研招网院校库记录</span>
+        </button>
+        <button class="stat" style="--accent: var(--green);" type="button" data-filter-action="all-provinces">
+          <span class="label">省级地区</span>
+          <span class="num" id="totalProvinces">--</span>
+          <span class="sub">按院校所在地分组</span>
+        </button>
+        <button class="stat" style="--accent: var(--gold);" type="button" data-tag-filter="双一流">
+          <span class="label">双一流</span>
+          <span class="num" id="doubleFirstCount">--</span>
+          <span class="sub">含“双一流”标签</span>
+        </button>
+        <button class="stat" style="--accent: var(--teal);" type="button" data-tag-filter="研究生院">
+          <span class="label">研究生院</span>
+          <span class="num" id="graduateSchoolCount">--</span>
+          <span class="sub">含“研究生院”标签</span>
+        </button>
+        <button class="stat" style="--accent: var(--red);" type="button" data-tag-filter="自划线">
+          <span class="label">自划线</span>
+          <span class="num" id="selfMarkingCount">--</span>
+          <span class="sub">含“自划线”标签</span>
+        </button>
+      </section>
+
+      <section class="major-filter-band container">
+        <div class="major-filter-panel">
+          <div class="major-filter-head">
+            <div>
+              <h3>专业与估分</h3>
+              <p>专业目录联动招生单位，分数结果区分真实线与估算参考。</p>
+            </div>
+            <button class="btn" id="clearMajorBtn" type="button">清空专业</button>
+          </div>
+          <div class="major-filter-controls">
+            <div class="field">
+              <label for="majorGroupFilter">学位 / 门类</label>
+              <select id="majorGroupFilter" aria-label="学位与门类"></select>
+            </div>
+            <div class="field">
+              <label for="majorDisciplineFilter">一级学科</label>
+              <select id="majorDisciplineFilter" aria-label="一级学科"></select>
+            </div>
+            <div class="field">
+              <label for="majorFilter">具体专业</label>
+              <select id="majorFilter" aria-label="具体专业"></select>
+            </div>
+            <div class="field">
+              <label for="majorSearchInput">专业搜索</label>
+              <input id="majorSearchInput" type="search" placeholder="名称、代码" aria-label="搜索具体专业" autocomplete="off" />
+            </div>
+          </div>
+          <div class="major-search-meta" id="majorSearchMeta" aria-live="polite"></div>
+          <div class="target-wall" aria-label="每日任务">
+            <div class="target-wall-head">
+              <h4>每日任务</h4>
+              <div class="target-actions">
+                <button class="btn" id="targetFromSelectedBtn" type="button">设为当前选中学校</button>
+                <button class="btn" id="clearTargetBtn" type="button">清空目标</button>
+              </div>
+            </div>
+            <div class="target-input-row">
+              <div class="field">
+                <label for="targetSchoolInput">目标学校</label>
+                <input id="targetSchoolInput" type="search" placeholder="输入学校名或代码" aria-label="目标学校" autocomplete="off" />
+              </div>
+              <button class="btn primary" id="applyTargetBtn" type="button">锁定目标</button>
+            </div>
+            <div id="targetWallBody" aria-live="polite"></div>
+          </div>
+          <div class="score-advisor" aria-label="估分择校">
+            <div class="score-advisor-head">
+              <div>
+                <h4>估分择校</h4>
+              </div>
+              <div class="score-actions">
+                <button class="btn" id="reloadScoreBtn" type="button">重新加载</button>
+                <button class="btn" id="clearScoreBtn" type="button">清空分数</button>
+              </div>
+            </div>
+            <div class="score-input-grid">
+              <div class="field">
+                <label for="scoreTotalInput">预估总分</label>
+                <input id="scoreTotalInput" type="number" min="0" max="750" step="1" placeholder="如 360" aria-label="预估总分" inputmode="numeric" />
+              </div>
+              <div class="field">
+                <label for="scorePoliticsInput">政治</label>
+                <input id="scorePoliticsInput" type="number" min="0" max="100" step="1" placeholder="选填" aria-label="政治预估分" inputmode="numeric" />
+              </div>
+              <div class="field">
+                <label for="scoreForeignInput">外语</label>
+                <input id="scoreForeignInput" type="number" min="0" max="100" step="1" placeholder="选填" aria-label="外语预估分" inputmode="numeric" />
+              </div>
+              <div class="field">
+                <label for="scoreBusiness1Input">业务课一</label>
+                <input id="scoreBusiness1Input" type="number" min="0" max="150" step="1" placeholder="选填" aria-label="业务课一预估分" inputmode="numeric" />
+              </div>
+              <div class="field">
+                <label for="scoreBusiness2Input">业务课二</label>
+                <input id="scoreBusiness2Input" type="number" min="0" max="150" step="1" placeholder="选填" aria-label="业务课二预估分" inputmode="numeric" />
+              </div>
+            </div>
+            <div class="score-summary" id="scoreSummary" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="filters container">
+        <div class="filter-panel">
+          <div class="field">
+            <input id="searchInput" type="search" placeholder="搜索学校、代码、主管部门、省份" />
+          </div>
+          <div class="field">
+            <select id="provinceFilter" aria-label="省份"></select>
+          </div>
+          <div class="field">
+            <select id="tagFilter" aria-label="院校标签"></select>
+          </div>
+          <div class="field">
+            <select id="supervisorFilter" aria-label="主管部门"></select>
+          </div>
+          <div class="field">
+            <select id="languageFilter" aria-label="初试外语科目"></select>
+          </div>
+          <div class="field">
+            <select id="sortFilter" aria-label="排序"></select>
+          </div>
+          <button class="btn" id="resetBtn" type="button">重置</button>
+        </div>
+      </section>
+
+      <section class="main">
+        <div class="container layout">
+          <aside class="province-list" id="provinceList"></aside>
+
+          <section class="content">
+            <article class="section">
+              <div class="section-head">
+                <div>
+                  <h3 id="provinceTitle">全国</h3>
+                  <p id="provinceSubtitle">--</p>
+                </div>
+                <div class="toolbar">
+                  <a class="link-btn" id="provinceSource" href="https://yz.chsi.com.cn/sch/" target="_blank" rel="noreferrer">省份源页</a>
+                </div>
+              </div>
+              <div class="province-summary">
+                <div class="mini-stat">
+                  <div class="num" id="visibleUnits">--</div>
+                  <div class="txt">当前表格单位数</div>
+                </div>
+                <button class="mini-stat" type="button" data-tag-filter="双一流">
+                  <span class="num" id="provinceDoubleFirst">--</span>
+                  <span class="txt">当前范围双一流</span>
+                </button>
+                <button class="mini-stat" type="button" data-tag-filter="研究生院">
+                  <span class="num" id="provinceGraduate">--</span>
+                  <span class="txt">当前范围研究生院</span>
+                </button>
+                <button class="mini-stat" type="button" data-filter-action="all-supervisors">
+                  <span class="num" id="provinceSupervisor">--</span>
+                  <span class="txt">主管部门类别数</span>
+                </button>
+              </div>
+            </article>
+
+            <article class="section">
+              <div class="section-head">
+                <div>
+                  <h3>招生单位明细</h3>
+                  <p id="tableNote">--</p>
+                </div>
+              </div>
+              <div class="table-wrap">
+                <table>
+                  <colgroup>
+                    <col class="school-col" />
+                    <col class="province-col" />
+                    <col class="supervisor-col" />
+                    <col class="tag-col" />
+                    <col class="score-col" />
+                    <col class="link-col" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>招生单位</th>
+                      <th>省份</th>
+                      <th>主管部门</th>
+                      <th>标签</th>
+                      <th>分数评估</th>
+                      <th>研招网入口</th>
+                    </tr>
+                  </thead>
+                  <tbody id="unitTable"></tbody>
+                </table>
+              </div>
+              <div class="empty" id="emptyState" hidden>没有匹配记录。</div>
+            </article>
+
+            <article class="section" id="detailSection">
+              <div class="section-head">
+                <div>
+                  <h3 id="detailName">招生单位详情</h3>
+                  <p id="detailMeta">--</p>
+                </div>
+              </div>
+              <div class="detail-grid">
+                <div class="detail-block">
+                  <h4>院校标签</h4>
+                  <div class="chips" id="detailTags"></div>
+                </div>
+                <div class="detail-block">
+                  <h4>官方入口</h4>
+                  <div class="links" id="detailLinks"></div>
+                </div>
+                <div class="detail-block">
+                  <h4>初试外语核对</h4>
+                  <p id="detailLanguage" style="margin:0;color:var(--muted);line-height:1.65;font-size:0.9rem;">--</p>
+                </div>
+                <div class="detail-block">
+                  <h4>初试外语口径</h4>
+                  <div class="chips" id="detailLanguageTags"></div>
+                </div>
+                <div class="detail-block">
+                  <h4>当前专业匹配</h4>
+                  <p id="detailMajor" style="margin:0;color:var(--muted);line-height:1.65;font-size:0.9rem;">--</p>
+                </div>
+                <div class="detail-block">
+                  <h4>专业口径</h4>
+                  <div class="chips" id="detailMajorTags"></div>
+                </div>
+                <div class="detail-block">
+                  <h4>估分结果</h4>
+                  <p id="detailScore" style="margin:0;color:var(--muted);line-height:1.65;font-size:0.9rem;">--</p>
+                </div>
+                <div class="detail-block">
+                  <h4>近三年复试线</h4>
+                  <div class="chips" id="detailScoreTags"></div>
+                </div>
+              </div>
+            </article>
+          </section>
+        </div>
+      </section>
+
+      <section class="foot">
+        <div class="container foot-grid">
+          <article class="foot-box">
+            <h3>数据口径</h3>
+            <p>
+              本页由本地脚本抓取研招网院校库省份分页生成。招生单位的院校库信息由各招生单位自主维护，涉及报考条件、招生计划、考试科目和专业目录时，以研招网和招生单位官网最新公告为准。
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="schools-data.js"></script>
+  <script src="majors-data.js"></script>
+  <script>
+    const data = window.__KAOYAN_SCHOOLS_DATA__;
+    const majorData = window.__KAOYAN_MAJORS_DATA__ || { majors: [] };
+    const subjectData = window.__KAOYAN_SUBJECTS_DATA__ || { records: [] };
+    const colors = ["#245fc1", "#147357", "#af8012", "#b64130", "#1f7683", "#6456a3"];
+    const languageCatalog = [
+      {
+        id: "all",
+        code: "全部",
+        name: "全部初试外语",
+        type: "分类总览",
+        subjects: ["201 英语一", "204 英语二", "202 俄语", "203 日语", "自命题外语"],
+        note: "用于先看院校，再进入硕士目录按专业方向核对初试外语科目；当前不是全量精确科目库。"
+      },
+      {
+        id: "201",
+        code: "201",
+        name: "英语（一）",
+        type: "全国统考",
+        subjects: ["201 英语（一）"],
+        note: "筛选院校库中常见学术学位培养单位、研究院所和综合类招生单位。"
+      },
+      {
+        id: "204",
+        code: "204",
+        name: "英语（二）",
+        type: "全国统考",
+        subjects: ["204 英语（二）"],
+        note: "筛选更常见专业学位招生的单位，如财经、管理、工程、师范、医药等。"
+      },
+      {
+        id: "202",
+        code: "202",
+        name: "俄语",
+        type: "全国统考",
+        subjects: ["202 俄语"],
+        note: "筛选俄语相关候选单位；部分综合类院校需要按官网专业目录人工校正。"
+      },
+      {
+        id: "203",
+        code: "203",
+        name: "日语",
+        type: "全国统考",
+        subjects: ["203 日语"],
+        note: "筛选外语类、师范类、综合类、传媒艺术类及沿海地区候选单位。"
+      },
+      {
+        id: "custom",
+        code: "自命题",
+        name: "小语种/自命题外语",
+        type: "招生单位自命题",
+        subjects: ["法语", "德语", "西班牙语", "阿拉伯语", "朝鲜语等"],
+        note: "筛选外国语、外交、国际关系、传媒、艺术、民族类候选单位。"
+      }
+    ];
+    const languageRuleKeywords = {
+      academic: ["大学", "研究院", "科学院", "研究所", "学院", "党校", "社科院"],
+      professional: ["财经", "工商", "管理", "工程", "工业", "理工", "科技", "交通", "建筑", "医", "药", "师范", "政法", "农业", "林业", "体育", "审计"],
+      russian: ["外国语", "外语", "语言", "国际", "民族", "黑龙江", "吉林", "辽宁", "内蒙古", "新疆", "俄罗斯", "边疆"],
+      japanese: ["外国语", "外语", "语言", "师范", "文学", "传媒", "艺术", "国际", "上海", "浙江", "江苏", "福建", "广东", "山东", "辽宁"],
+      custom: ["外国语", "外语", "语言", "外交", "国际关系", "国际", "传媒", "美术", "音乐", "戏剧", "电影", "艺术", "民族", "体育"]
+    };
+    const foreignLanguageOverrides = {
+      "202": {
+        "10007": {
+          label: "北京理工大学部分专业官网目录含 202 俄语选项",
+          sourceUrl: "https://grd.bit.edu.cn/zsgz/zsxx/66c02739ebaa42f3a1b42992d2f98feb.htm"
+        }
+      }
+    };
+    const state = {
+      query: "",
+      province: "全部省份",
+      tag: "全部标签",
+      supervisor: "全部主管部门",
+      language: "all",
+      majorGroup: "all",
+      majorDiscipline: "all",
+      majorQuery: "",
+      major: "all",
+      targetQuery: "",
+      scoreTotal: "",
+      scorePolitics: "",
+      scoreForeign: "",
+      scoreBusiness1: "",
+      scoreBusiness2: "",
+      sort: "省份顺序",
+      selectedId: ""
+    };
+
+    const scoreState = {
+      majorCode: "",
+      status: "idle",
+      message: "选择具体专业后加载远程复试线小文件。",
+      data: null,
+      error: "",
+      requestId: 0
+    };
+
+    const subjectState = {
+      majorCode: "",
+      status: "idle",
+      message: "选择具体专业后加载初试科目小文件。",
+      records: [],
+      error: "",
+      requestId: 0
+    };
+
+    const scoreCache = new Map();
+    const subjectCache = new Map();
+    const scoreTierMeta = {
+      safe: { label: "保底", className: "safe", rank: 1 },
+      stable: { label: "稳妥", className: "stable", rank: 2 },
+      sprint: { label: "冲刺", className: "sprint", rank: 3 },
+      risk: { label: "风险较高", className: "risk", rank: 4 },
+      none: { label: "暂无依据", className: "empty", rank: 5 },
+      inactive: { label: "未估分", className: "empty", rank: 6 }
+    };
+
+    const scoreEstimateCategoryBase = {
+      "01": { value: 333, label: "哲学基准" },
+      "02": { value: 338, label: "经济学基准" },
+      "03": { value: 331, label: "法学基准" },
+      "04": { value: 350, label: "教育学基准" },
+      "05": { value: 365, label: "文学基准" },
+      "06": { value: 345, label: "历史学基准" },
+      "07": { value: 280, label: "理学基准" },
+      "08": { value: 273, label: "工学基准" },
+      "09": { value: 260, label: "农学基准" },
+      "10": { value: 300, label: "医学基准" },
+      "11": { value: 260, label: "军事学基准" },
+      "12": { value: 340, label: "管理学基准" },
+      "13": { value: 362, label: "艺术学基准" },
+      "14": { value: 350, label: "交叉学科基准" }
+    };
+
+    const els = {
+      sourceLine: document.getElementById("sourceLine"),
+      topProvinceBars: document.getElementById("topProvinceBars"),
+      totalUnits: document.getElementById("totalUnits"),
+      totalProvinces: document.getElementById("totalProvinces"),
+      doubleFirstCount: document.getElementById("doubleFirstCount"),
+      graduateSchoolCount: document.getElementById("graduateSchoolCount"),
+      selfMarkingCount: document.getElementById("selfMarkingCount"),
+      searchInput: document.getElementById("searchInput"),
+      provinceFilter: document.getElementById("provinceFilter"),
+      tagFilter: document.getElementById("tagFilter"),
+      supervisorFilter: document.getElementById("supervisorFilter"),
+      languageFilter: document.getElementById("languageFilter"),
+      majorGroupFilter: document.getElementById("majorGroupFilter"),
+      majorDisciplineFilter: document.getElementById("majorDisciplineFilter"),
+      majorFilter: document.getElementById("majorFilter"),
+      majorSearchInput: document.getElementById("majorSearchInput"),
+      majorSearchMeta: document.getElementById("majorSearchMeta"),
+      targetSchoolInput: document.getElementById("targetSchoolInput"),
+      targetFromSelectedBtn: document.getElementById("targetFromSelectedBtn"),
+      clearTargetBtn: document.getElementById("clearTargetBtn"),
+      applyTargetBtn: document.getElementById("applyTargetBtn"),
+      targetWallBody: document.getElementById("targetWallBody"),
+      scoreStatus: document.getElementById("scoreStatus"),
+      scoreSummary: document.getElementById("scoreSummary"),
+      scoreTotalInput: document.getElementById("scoreTotalInput"),
+      scorePoliticsInput: document.getElementById("scorePoliticsInput"),
+      scoreForeignInput: document.getElementById("scoreForeignInput"),
+      scoreBusiness1Input: document.getElementById("scoreBusiness1Input"),
+      scoreBusiness2Input: document.getElementById("scoreBusiness2Input"),
+      reloadScoreBtn: document.getElementById("reloadScoreBtn"),
+      clearScoreBtn: document.getElementById("clearScoreBtn"),
+      sortFilter: document.getElementById("sortFilter"),
+      resetBtn: document.getElementById("resetBtn"),
+      clearMajorBtn: document.getElementById("clearMajorBtn"),
+      exportBtn: document.getElementById("exportBtn"),
+      provinceList: document.getElementById("provinceList"),
+      provinceTitle: document.getElementById("provinceTitle"),
+      provinceSubtitle: document.getElementById("provinceSubtitle"),
+      provinceSource: document.getElementById("provinceSource"),
+      visibleUnits: document.getElementById("visibleUnits"),
+      provinceDoubleFirst: document.getElementById("provinceDoubleFirst"),
+      provinceGraduate: document.getElementById("provinceGraduate"),
+      provinceSupervisor: document.getElementById("provinceSupervisor"),
+      unitTable: document.getElementById("unitTable"),
+      tableNote: document.getElementById("tableNote"),
+      emptyState: document.getElementById("emptyState"),
+      detailName: document.getElementById("detailName"),
+      detailMeta: document.getElementById("detailMeta"),
+      detailTags: document.getElementById("detailTags"),
+      detailLinks: document.getElementById("detailLinks"),
+      detailLanguage: document.getElementById("detailLanguage"),
+      detailLanguageTags: document.getElementById("detailLanguageTags"),
+      detailMajor: document.getElementById("detailMajor"),
+      detailMajorTags: document.getElementById("detailMajorTags"),
+      detailScore: document.getElementById("detailScore"),
+      detailScoreTags: document.getElementById("detailScoreTags")
+    };
+
+    function allUnits() {
+      return data.provinces.flatMap((province, provinceIndex) =>
+        province.units.map((unit, unitIndex) => ({
+          ...unit,
+          id: `${province.code}-${unit.code || unitIndex}-${unitIndex}`,
+          provinceCode: province.code,
+          provinceName: province.name,
+          provinceIndex,
+          unitIndex,
+          sourceUrl: province.sourceUrl
+        }))
+      );
+    }
+
+    const units = allUnits();
+    const majors = Array.isArray(majorData.majors) ? majorData.majors : [];
+    const majorById = new Map(majors.map((major) => [major.id, major]));
+    const majorUnitSets = new Map();
+    let subjectRecords = [];
+    const subjectRecordsByKey = new Map();
+
+    function subjectIndexKey(majorKey, schoolKey) {
+      return `${majorKey}@@${schoolKey}`;
+    }
+
+    function addSubjectIndexRecord(majorKey, schoolKey, record) {
+      if (!majorKey || !schoolKey) return;
+      const key = subjectIndexKey(majorKey, schoolKey);
+      if (!subjectRecordsByKey.has(key)) subjectRecordsByKey.set(key, []);
+      subjectRecordsByKey.get(key).push(record);
+    }
+
+    function rebuildSubjectIndex(records) {
+      subjectRecords = Array.isArray(records) ? records : [];
+      subjectRecordsByKey.clear();
+      subjectRecords.forEach((record) => {
+        const majorKeys = [record.majorId, record.majorCode].filter(Boolean);
+        const schoolKeys = [
+          record.schoolCode ? `code:${record.schoolCode}` : "",
+          record.schoolName ? `name:${record.schoolName}` : ""
+        ].filter(Boolean);
+        majorKeys.forEach((majorKey) => {
+          schoolKeys.forEach((schoolKey) => addSubjectIndexRecord(majorKey, schoolKey, record));
+        });
+      });
+    }
+
+    rebuildSubjectIndex(Array.isArray(subjectData.records) ? subjectData.records : []);
+
+    function subjectShardIndex(code) {
+      let hash = 0;
+      for (const char of String(code || "")) {
+        hash = (hash * 31 + char.charCodeAt(0)) >>> 0;
+      }
+      return hash % 30;
+    }
+
+    function subjectFileUrl(major) {
+      if (!major || !major.code) return "";
+      return `subjects/shards/${String(subjectShardIndex(major.code)).padStart(2, "0")}.json.gz`;
+    }
+
+    async function readJsonResource(response, url) {
+      if (!url.endsWith(".gz")) return response.json();
+      if (!response.body || !("DecompressionStream" in window)) {
+        throw new Error("当前浏览器不支持压缩数据解压");
+      }
+      const stream = response.body.pipeThrough(new DecompressionStream("gzip"));
+      return new Response(stream).json();
+    }
+
+    function resetSubjectData(message = "选择具体专业后加载初试科目小文件。") {
+      subjectState.majorCode = "";
+      subjectState.status = "idle";
+      subjectState.message = message;
+      subjectState.records = [];
+      subjectState.error = "";
+      rebuildSubjectIndex([]);
+    }
+
+    function expandCompactSubject(subject) {
+      if (!Array.isArray(subject)) return subject || null;
+      return {
+        code: subject[0] || "",
+        name: subject[1] || ""
+      };
+    }
+
+    function expandCompactSubjectCombo(combo) {
+      if (!Array.isArray(combo)) return combo || {};
+      return {
+        politics: expandCompactSubject(combo[0]),
+        foreignLanguage: expandCompactSubject(combo[1]),
+        business1: expandCompactSubject(combo[2]),
+        business2: expandCompactSubject(combo[3])
+      };
+    }
+
+    function expandCompactSubjectRecord(record, major, majorPayload) {
+      if (!Array.isArray(record)) return record;
+      return {
+        schoolCode: record[0] || "",
+        schoolName: record[1] || "",
+        collegeCode: record[2] || "",
+        collegeName: record[3] || "",
+        researchDirectionCode: record[4] || "",
+        researchDirectionName: record[5] || "",
+        foreignLanguageCodes: Array.isArray(record[6]) ? record[6] : [],
+        foreignLanguageNames: Array.isArray(record[7]) ? record[7] : [],
+        subjectCombinations: Array.isArray(record[8]) ? record[8].map(expandCompactSubjectCombo) : [],
+        isPartial: Boolean(record[9]),
+        majorId: majorPayload?.id || major?.id || "",
+        majorCode: majorPayload?.c || major?.code || "",
+        majorName: majorPayload?.n || major?.name || ""
+      };
+    }
+
+    function applySubjectPayload(major, payload) {
+      const majorPayload = payload?.majors?.[major.code] || payload;
+      const rawRecords = Array.isArray(majorPayload?.records)
+        ? majorPayload.records
+        : Array.isArray(majorPayload?.r)
+          ? majorPayload.r
+          : [];
+      const records = rawRecords.map((record) => expandCompactSubjectRecord(record, major, majorPayload));
+      const normalized = {
+        ...majorPayload,
+        majorCode: majorPayload?.majorCode || majorPayload?.c || major?.code || "",
+        majorName: majorPayload?.majorName || majorPayload?.n || major?.name || "",
+        records
+      };
+      subjectCache.set(major.code, normalized);
+      subjectState.majorCode = major.code;
+      subjectState.status = records.length ? "ready" : "empty";
+      subjectState.records = records;
+      subjectState.error = "";
+      subjectState.message = records.length
+        ? `已加载 ${subjectFileUrl(major)}，共 ${records.length} 条方向级初试科目。`
+        : "当前专业暂无初试科目记录，暂用候选规则。";
+      rebuildSubjectIndex(records);
+    }
+
+    async function loadSubjectDataForSelectedMajor(options = {}) {
+      const major = selectedMajor();
+      const requestId = ++subjectState.requestId;
+      if (!major || !major.code) {
+        resetSubjectData();
+        render();
+        return;
+      }
+
+      if (!options.force && subjectCache.has(major.code)) {
+        applySubjectPayload(major, subjectCache.get(major.code));
+        render();
+        return;
+      }
+
+      const url = subjectFileUrl(major);
+      subjectState.majorCode = major.code;
+      subjectState.status = "loading";
+      subjectState.records = [];
+      subjectState.error = "";
+      subjectState.message = `正在加载 ${url}...`;
+      rebuildSubjectIndex([]);
+      render();
+
+      try {
+        const response = await fetch(url, { cache: options.force ? "reload" : "default" });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const payload = await readJsonResource(response, url);
+        if (requestId !== subjectState.requestId) return;
+        applySubjectPayload(major, payload);
+      } catch (error) {
+        if (requestId !== subjectState.requestId) return;
+        subjectState.majorCode = major.code;
+        subjectState.status = "missing";
+        subjectState.records = [];
+        subjectState.error = error.message;
+        subjectState.message = "当前专业暂无初试科目小文件，暂用候选规则。";
+        rebuildSubjectIndex([]);
+      }
+      render();
+    }
+
+    function loadDataForSelectedMajor(options = {}) {
+      loadSubjectDataForSelectedMajor(options.subjects || {});
+      loadScoreDataForSelectedMajor(options.scores || {});
+    }
+
+    function hasTag(unit, tag) {
+      return (unit.tags || []).includes(tag);
+    }
+
+    function majorLabel(major) {
+      if (!major) return "全部专业";
+      return `(${major.code})${major.name}`;
+    }
+
+    function majorMeta(major) {
+      if (!major) return "全部专业";
+      return [major.degreeType, major.categoryName, major.disciplineName].filter(Boolean).join(" · ");
+    }
+
+    function escapeHtml(value) {
+      return String(value ?? "").replace(/[&<>"']/g, (char) => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+      })[char]);
+    }
+
+    function normalizeText(value) {
+      return String(value || "").trim().toLowerCase();
+    }
+
+    function majorSearchText(major) {
+      return normalizeText([
+        major.code,
+        major.name,
+        major.degreeType,
+        major.categoryCode,
+        major.categoryName,
+        major.disciplineCode,
+        major.disciplineName
+      ].join(" "));
+    }
+
+    function majorMatchesSearch(major, query = state.majorQuery) {
+      const tokens = normalizeText(query).split(/\s+/).filter(Boolean);
+      if (!tokens.length) return true;
+      const text = majorSearchText(major);
+      return tokens.every((token) => text.includes(token));
+    }
+
+    function scoreMajorSearch(major, query = state.majorQuery) {
+      const q = normalizeText(query);
+      const name = normalizeText(major.name);
+      const code = normalizeText(major.code);
+      const meta = normalizeText(majorMeta(major));
+      let score = Math.min(major.unitCount || 0, 999) / 10;
+      if (!q) return score;
+      if (code === q || name === q) score += 1000;
+      if (code.startsWith(q) || name.startsWith(q)) score += 520;
+      if (code.includes(q) || name.includes(q)) score += 260;
+      if (meta.includes(q)) score += 120;
+      return score;
+    }
+
+    function getMajorSearchResults() {
+      return getMajorsForMajorSelect()
+        .sort((a, b) =>
+          scoreMajorSearch(b) - scoreMajorSearch(a)
+          || (b.unitCount || 0) - (a.unitCount || 0)
+          || String(a.code || "").localeCompare(String(b.code || ""))
+          || String(a.name || "").localeCompare(String(b.name || ""), "zh-Hans-CN")
+        );
+    }
+
+    function getMajorUnitSet(major) {
+      if (!major) return new Set();
+      if (majorUnitSets.has(major.id)) return majorUnitSets.get(major.id);
+      const set = new Set();
+      (major.units || []).forEach((item) => {
+        if (item.schoolCode) set.add(`code:${item.schoolCode}`);
+        if (item.schoolName) set.add(`name:${item.schoolName}`);
+        if (item.schoolName && item.provinceName) set.add(`nameProvince:${item.schoolName}@${item.provinceName}`);
+      });
+      majorUnitSets.set(major.id, set);
+      return set;
+    }
+
+    function findMajorOffering(unit, major) {
+      if (!major) return null;
+      return (major.units || []).find((item) =>
+        (item.schoolCode && unit.code && item.schoolCode === unit.code)
+        || (item.schoolName === unit.name && (!item.provinceName || item.provinceName === unit.provinceName))
+        || item.schoolName === unit.name
+      ) || null;
+    }
+
+    function unitSchoolKeys(unit) {
+      return [
+        (unit.code || unit.schoolCode) ? `code:${unit.code || unit.schoolCode}` : "",
+        (unit.name || unit.schoolName) ? `name:${unit.name || unit.schoolName}` : ""
+      ].filter(Boolean);
+    }
+
+    function subjectRecordIdentity(record) {
+      return [
+        record.offeringKey,
+        record.collegeCode,
+        record.collegeName,
+        record.researchDirectionCode,
+        record.researchDirectionName,
+        JSON.stringify(record.subjectCombinations || [])
+      ].join("|");
+    }
+
+    function exactSubjectRecordsFor(unit, major) {
+      if (!unit || !major) return [];
+      const records = [];
+      const seen = new Set();
+      const majorKeys = [major.id, major.code].filter(Boolean);
+      const schoolKeys = unitSchoolKeys(unit);
+      majorKeys.forEach((majorKey) => {
+        schoolKeys.forEach((schoolKey) => {
+          (subjectRecordsByKey.get(subjectIndexKey(majorKey, schoolKey)) || []).forEach((record) => {
+            const identity = subjectRecordIdentity(record);
+            if (seen.has(identity)) return;
+            seen.add(identity);
+            records.push(record);
+          });
+        });
+      });
+      return records;
+    }
+
+    function subjectName(subject) {
+      if (!subject) return "";
+      return [subject.code, subject.name].filter(Boolean).join(" ");
+    }
+
+    function subjectComboLabel(combo) {
+      if (!combo) return "";
+      return [combo.politics, combo.foreignLanguage, combo.business1, combo.business2]
+        .map(subjectName)
+        .filter(Boolean)
+        .join(" / ");
+    }
+
+    function foreignSubjectLabels(records) {
+      return unique(records.flatMap((record) =>
+        (record.subjectCombinations || [])
+          .map((combo) => subjectName(combo.foreignLanguage))
+          .filter(Boolean)
+      ));
+    }
+
+    function subjectForeignSummary(records, max = 8) {
+      const labels = foreignSubjectLabels(records);
+      if (!labels.length) return "未标明外语科目";
+      const shown = labels.slice(0, max).join("、");
+      return labels.length > max ? `${shown} 等 ${labels.length} 项` : shown;
+    }
+
+    function subjectRecordsBrief(records, max = 3) {
+      if (!records.length) return "";
+      const lines = records.slice(0, max).map((record) => {
+        const college = record.collegeName ? `${record.collegeName} · ` : "";
+        const direction = [record.researchDirectionCode, record.researchDirectionName].filter(Boolean).join(" ");
+        const combo = subjectComboLabel((record.subjectCombinations || [])[0]);
+        return `${college}${direction || "不区分研究方向"}：${combo || subjectForeignSummary([record])}`;
+      });
+      return records.length > max ? `${lines.join("；")}；另有 ${records.length - max} 条方向记录` : lines.join("；");
+    }
+
+    function subjectRecordMatchesLanguage(record, languageId) {
+      if (languageId === "all") return true;
+      const codes = record.foreignLanguageCodes || [];
+      if (codes.includes(languageId)) return true;
+      if (languageId === "custom") {
+        const names = record.foreignLanguageNames || [];
+        return codes.some((code) => !["201", "202", "203", "204"].includes(code))
+          || names.some((name) => /自命题|法语|德语|西班牙|阿拉伯|朝鲜|越南|泰语|外语/.test(name) && !/英语|俄语|日语/.test(name));
+      }
+      return false;
+    }
+
+    function exactSubjectMatchFor(unit, languageId, majorId = state.major) {
+      const major = majorById.get(majorId);
+      if (!major) return { hasExact: false, matches: true, records: [], matchingRecords: [] };
+      const records = exactSubjectRecordsFor(unit, major);
+      if (!records.length) return { hasExact: false, matches: true, records: [], matchingRecords: [] };
+      const matchingRecords = languageId === "all" ? records : records.filter((record) => subjectRecordMatchesLanguage(record, languageId));
+      return {
+        hasExact: true,
+        matches: languageId === "all" || matchingRecords.length > 0,
+        records,
+        matchingRecords
+      };
+    }
+
+    function supervisorGroup(unit) {
+      const text = unit.supervisor || "未标明";
+      if (text.includes("教育部")) return "教育部";
+      if (text.includes("科学院")) return "中国科学院";
+      if (text.includes("工程院")) return "中国工程院";
+      if (text.includes("省委") || text.includes("省")) return "地方";
+      if (text.includes("未标明")) return "未标明";
+      return "其他部委/单位";
+    }
+
+    function matchesQueryFor(unit, query) {
+      if (!query) return true;
+      const q = query.toLowerCase();
+      const text = [
+        unit.name,
+        unit.code,
+        unit.provinceName,
+        unit.supervisor,
+        ...(unit.tags || [])
+      ].join(" ").toLowerCase();
+      return text.includes(q);
+    }
+
+    function matchesQuery(unit) {
+      return matchesQueryFor(unit, state.query);
+    }
+
+    function unitText(unit) {
+      return [
+        unit.name,
+        unit.code,
+        unit.provinceName,
+        unit.supervisor,
+        ...(unit.tags || [])
+      ].join(" ");
+    }
+
+    function hasAny(text, words) {
+      return words.some((word) => text.includes(word));
+    }
+
+    function foreignLanguageOverride(unit, languageId) {
+      if (!unit || !languageId || languageId === "all") return null;
+      const overrides = foreignLanguageOverrides[languageId];
+      if (!overrides) return null;
+      return overrides[unit.code] || overrides[unit.name] || null;
+    }
+
+    function languageMatchesUnitFor(unit, languageId, majorId = state.major) {
+      if (languageId === "all") return true;
+      const exact = exactSubjectMatchFor(unit, languageId, majorId);
+      if (exact.hasExact) return exact.matches;
+      if (foreignLanguageOverride(unit, languageId)) return true;
+      const text = unitText(unit);
+      if (languageId === "201") {
+        return hasAny(text, languageRuleKeywords.academic) || hasTag(unit, "研究生院") || hasTag(unit, "双一流");
+      }
+      if (languageId === "204") {
+        return hasAny(text, languageRuleKeywords.professional) || unit.name.includes("大学") || unit.name.includes("学院");
+      }
+      if (languageId === "202") {
+        return hasAny(text, languageRuleKeywords.russian) || ["黑龙江", "吉林", "辽宁", "内蒙古", "新疆"].includes(unit.provinceName);
+      }
+      if (languageId === "203") {
+        return hasAny(text, languageRuleKeywords.japanese) || ["上海", "江苏", "浙江", "福建", "广东", "山东", "辽宁"].includes(unit.provinceName);
+      }
+      if (languageId === "custom") {
+        return hasAny(text, languageRuleKeywords.custom);
+      }
+      return true;
+    }
+
+    function languageMatchesUnit(unit) {
+      return languageMatchesUnitFor(unit, state.language);
+    }
+
+    function languageMatchReason(unit) {
+      const lang = selectedLanguage();
+      if (state.language === "all") return "全部初试外语候选";
+      const exact = exactSubjectMatchFor(unit, state.language, state.major);
+      if (exact.hasExact) {
+        const records = exact.matchingRecords.length ? exact.matchingRecords : exact.records;
+        const partial = exact.records.some((record) => record.isPartial) ? "；方向分页可能未完全抓取" : "";
+        return `精确科目匹配：${subjectForeignSummary(records)}${partial}`;
+      }
+      const override = foreignLanguageOverride(unit, state.language);
+      if (override) return `人工校正：${override.label}`;
+      if (state.language === "201") return "按学术学位/研究型单位规则匹配";
+      if (state.language === "204") return "按专业学位常见单位规则匹配";
+      if (state.language === "202") return ["黑龙江", "吉林", "辽宁", "内蒙古", "新疆"].includes(unit.provinceName)
+        ? "按俄语高相关地区匹配"
+        : `按${lang.name}关键词匹配`;
+      if (state.language === "203") return ["上海", "江苏", "浙江", "福建", "广东", "山东", "辽宁"].includes(unit.provinceName)
+        ? "按日语高相关地区匹配"
+        : `按${lang.name}关键词匹配`;
+      return "按小语种/自命题外语相关院校类型匹配";
+    }
+
+    function majorMatchesUnitFor(unit, majorId) {
+      if (majorId === "all") return true;
+      const major = majorById.get(majorId);
+      if (!major) return false;
+      const set = getMajorUnitSet(major);
+      return (unit.code && set.has(`code:${unit.code}`))
+        || set.has(`name:${unit.name}`)
+        || set.has(`nameProvince:${unit.name}@${unit.provinceName}`);
+    }
+
+    function targetQueryText() {
+      return normalizeText(state.targetQuery);
+    }
+
+    function targetMatchesUnitIdentity(unit, query) {
+      if (!unit || !query) return false;
+      const name = normalizeText(unit.name);
+      const code = normalizeText(unit.code);
+      return name.includes(query) || code.includes(query);
+    }
+
+    function targetMatchRank(unit, query) {
+      const name = normalizeText(unit.name);
+      const code = normalizeText(unit.code);
+      if (code && code === query) return 0;
+      if (name && name === query) return 1;
+      if (code && code.startsWith(query)) return 2;
+      if (name && name.startsWith(query)) return 3;
+      return 4;
+    }
+
+    function findTargetUnit() {
+      const query = targetQueryText();
+      if (!query) return { status: "empty", unit: null, candidates: [] };
+      const allMatches = units.filter((unit) => targetMatchesUnitIdentity(unit, query));
+      if (!allMatches.length) return { status: "not-found", unit: null, candidates: [] };
+      const majorMatches = allMatches.filter((unit) => majorMatchesUnitFor(unit, state.major));
+      if (!majorMatches.length) return { status: "major-mismatch", unit: null, candidates: allMatches };
+      const sorted = majorMatches.slice().sort((a, b) =>
+        targetMatchRank(a, query) - targetMatchRank(b, query)
+        || a.provinceIndex - b.provinceIndex
+        || a.unitIndex - b.unitIndex
+      );
+      return { status: "matched", unit: sorted[0], candidates: sorted };
+    }
+
+    function majorMatchReason(unit) {
+      if (state.major === "all") return "全部专业";
+      const major = selectedMajor();
+      const offering = findMajorOffering(unit, major);
+      if (!major || !offering) return "当前专业未匹配该单位";
+      const partial = major.isPartial ? `；本地已抓取 ${major.unitCount} / 官网显示 ${major.reportedUnitCount || major.unitCount} 所` : "";
+      return `${majorLabel(major)} · ${majorMeta(major)}${partial}`;
+    }
+
+    function unitMatchesFilters(unit, filters = state) {
+      const provinceOk = filters.province === "全部省份" || unit.provinceName === filters.province;
+      const tagOk = filters.tag === "全部标签" || hasTag(unit, filters.tag);
+      const supervisorOk = filters.supervisor === "全部主管部门" || supervisorGroup(unit) === filters.supervisor;
+      return provinceOk
+        && tagOk
+        && supervisorOk
+        && languageMatchesUnitFor(unit, filters.language, filters.major)
+        && majorMatchesUnitFor(unit, filters.major)
+        && matchesQueryFor(unit, filters.query);
+    }
+
+    function countUnitsFor(overrides = {}) {
+      const filters = { ...state, ...overrides };
+      return units.filter((unit) => unitMatchesFilters(unit, filters)).length;
+    }
+
+    function getFilteredUnits() {
+      let list = units.filter((unit) => unitMatchesFilters(unit));
+
+      list = list.slice().sort((a, b) => {
+        if (hasScoreInput() && state.major !== "all") {
+          const aScore = scoreEvaluationForUnit(a);
+          const bScore = scoreEvaluationForUnit(b);
+          const tierOrder = aScore.meta.rank - bScore.meta.rank;
+          if (tierOrder) return tierOrder;
+          const sourceOrder = (aScore.sourceRank ?? scoreSourceRank(aScore.sourceType)) - (bScore.sourceRank ?? scoreSourceRank(bScore.sourceType));
+          if (sourceOrder) return sourceOrder;
+          const deltaOrder = (bScore.delta ?? -9999) - (aScore.delta ?? -9999);
+          if (deltaOrder) return deltaOrder;
+        }
+        if (state.sort === "学校名称") return a.name.localeCompare(b.name, "zh-Hans-CN");
+        if (state.sort === "主管部门") return (a.supervisor || "").localeCompare(b.supervisor || "", "zh-Hans-CN");
+        if (state.sort === "代码") return String(a.code || "").localeCompare(String(b.code || ""));
+        return a.provinceIndex - b.provinceIndex || a.unitIndex - b.unitIndex;
+      });
+      return list;
+    }
+
+    function countWhere(list, fn) {
+      return list.reduce((sum, item) => sum + (fn(item) ? 1 : 0), 0);
+    }
+
+    function unique(list) {
+      return [...new Set(list.filter(Boolean))];
+    }
+
+    function optionList(select, values, first) {
+      select.innerHTML = [first, ...values.filter((value) => value !== first)].map((value) => `<option value="${value}">${value}</option>`).join("");
+    }
+
+    function selectedLanguage() {
+      return languageCatalog.find((item) => item.id === state.language) || languageCatalog[0];
+    }
+
+    function selectedMajor() {
+      return majorById.get(state.major) || null;
+    }
+
+    function toNumber(value) {
+      if (value === null || value === undefined || value === "") return null;
+      const number = Number(String(value).replace(/[^\d.]/g, ""));
+      return Number.isFinite(number) ? number : null;
+    }
+
+    function scoreInputs() {
+      return {
+        total: toNumber(state.scoreTotal),
+        politics: toNumber(state.scorePolitics),
+        foreignLanguage: toNumber(state.scoreForeign),
+        business1: toNumber(state.scoreBusiness1),
+        business2: toNumber(state.scoreBusiness2)
+      };
+    }
+
+    function hasScoreInput() {
+      return scoreInputs().total !== null;
+    }
+
+    function scoreFileUrl(major) {
+      if (!major || !major.code) return "";
+      return `scores/${encodeURIComponent(major.code)}.json`;
+    }
+
+    function normalizeScoreLine(line) {
+      const politics = toNumber(line.politics);
+      const foreignLanguage = toNumber(line.foreignLanguage);
+      const business1 = toNumber(line.business1);
+      const business2 = toNumber(line.business2);
+      const singleSubject100 = toNumber(line.singleSubject100);
+      const singleSubjectGt100 = toNumber(line.singleSubjectGt100);
+      return {
+        ...line,
+        year: toNumber(line.year),
+        schoolCode: String(line.schoolCode || ""),
+        schoolName: String(line.schoolName || ""),
+        collegeName: line.collegeName || "",
+        majorCode: String(line.majorCode || ""),
+        majorName: line.majorName || "",
+        studyMode: line.studyMode || "",
+        totalScore: toNumber(line.totalScore),
+        politics: politics ?? singleSubject100,
+        foreignLanguage: foreignLanguage ?? singleSubject100,
+        business1: business1 ?? singleSubjectGt100,
+        business2: business2 ?? singleSubjectGt100,
+        singleSubject100,
+        singleSubjectGt100,
+        sourceUrl: line.sourceUrl || ""
+      };
+    }
+
+    function normalizeScoreData(payload, major) {
+      const rawLines = Array.isArray(payload?.lines) ? payload.lines : [];
+      const lines = rawLines
+        .map(normalizeScoreLine)
+        .filter((line) => line.totalScore !== null && line.year !== null);
+      return {
+        ...payload,
+        majorCode: payload?.majorCode || major?.code || "",
+        majorName: payload?.majorName || major?.name || "",
+        lines
+      };
+    }
+
+    function scoreLinesForUnit(unit) {
+      if (!scoreState.data || !Array.isArray(scoreState.data.lines)) return [];
+      return scoreState.data.lines
+        .filter((line) =>
+          (unit.code && line.schoolCode && line.schoolCode === unit.code)
+          || line.schoolName === unit.name
+        )
+        .sort((a, b) =>
+          b.year - a.year
+          || (b.totalScore || 0) - (a.totalScore || 0)
+          || String(a.collegeName || "").localeCompare(String(b.collegeName || ""), "zh-Hans-CN")
+        );
+    }
+
+    function latestThreeScoreLines(unit) {
+      const byYear = new Map();
+      scoreLinesForUnit(unit).forEach((line) => {
+        if (!byYear.has(line.year) || line.totalScore > byYear.get(line.year).totalScore) {
+          byYear.set(line.year, line);
+        }
+      });
+      return Array.from(byYear.values()).sort((a, b) => b.year - a.year).slice(0, 3);
+    }
+
+    function clampScore(value, min, max) {
+      return Math.max(min, Math.min(max, value));
+    }
+
+    function signedScore(value) {
+      return `${value >= 0 ? "+" : ""}${value}`;
+    }
+
+    function scoreSourceRank(sourceType) {
+      if (sourceType === "real") return 0;
+      if (sourceType === "estimated") return 1;
+      if (sourceType === "none") return 2;
+      return 3;
+    }
+
+    function estimateBaseReferenceLine(major) {
+      const code = String(major?.categoryCode || major?.code?.slice(0, 2) || "");
+      const base = scoreEstimateCategoryBase[code] || { value: 300, label: "门类基准" };
+      return {
+        ...base,
+        categoryCode: code,
+        label: `${base.label}${base.value}`
+      };
+    }
+
+    function schoolLevel(unit) {
+      if (hasTag(unit, "自划线")) return { label: "自划线院校", points: 70 };
+      if (hasTag(unit, "双一流") && hasTag(unit, "研究生院")) return { label: "双一流+研究生院", points: 55 };
+      if (hasTag(unit, "双一流")) return { label: "双一流院校", points: 40 };
+      if (hasTag(unit, "研究生院")) return { label: "研究生院单位", points: 35 };
+      if ((unit.supervisor || "").includes("教育部")) return { label: "教育部直属", points: 28 };
+      return { label: "普通招生单位", points: 15 };
+    }
+
+    function majorHeat(major) {
+      const code = String(major?.code || "");
+      const text = [major?.name, major?.disciplineName, major?.categoryName].filter(Boolean).join("");
+      const highHeatCodes = ["0812", "0835", "0854"];
+      const highHeatWords = ["计算机", "软件", "网络", "人工智能", "电子信息", "通信", "集成电路", "数据"];
+      if (highHeatCodes.some((prefix) => code.startsWith(prefix)) || hasAny(text, highHeatWords)) {
+        return { label: "高热专业", points: 30 };
+      }
+      const mediumHeatCodes = ["0808", "0811", "0823", "0858"];
+      const mediumHeatWords = ["电气", "控制", "自动化", "交通", "建筑", "城乡规划"];
+      if (mediumHeatCodes.some((prefix) => code.startsWith(prefix)) || hasAny(text, mediumHeatWords)) {
+        return { label: "较热专业", points: 20 };
+      }
+      const steadyHeatCodes = ["0802", "0805", "0814", "0817", "0830", "0855", "0856", "0857", "0859"];
+      const steadyHeatWords = ["机械", "材料", "化工", "土木", "环境", "能源", "资源", "水利"];
+      if (steadyHeatCodes.some((prefix) => code.startsWith(prefix)) || hasAny(text, steadyHeatWords)) {
+        return { label: "常见工科专业", points: 12 };
+      }
+      if (String(major?.categoryCode || code.slice(0, 2)) === "08") {
+        return { label: "工学常规热度", points: 8 };
+      }
+      return { label: "常规热度", points: 5 };
+    }
+
+    function provinceCompetition(unit) {
+      const high = ["北京", "上海", "江苏", "浙江", "广东"];
+      const medium = ["天津", "湖北", "四川", "山东", "陕西"];
+      if (high.includes(unit.provinceName)) return { label: "热门地区", points: 8 };
+      if (medium.includes(unit.provinceName)) return { label: "较热地区", points: 5 };
+      return { label: "常规地区", points: 0 };
+    }
+
+    function estimateReferenceLine(unit, major) {
+      const base = estimateBaseReferenceLine(major);
+      const level = schoolLevel(unit);
+      const heat = majorHeat(major);
+      const region = provinceCompetition(unit);
+      const rawLine = base.value + level.points + heat.points + region.points;
+      const referenceLine = Math.round(clampScore(rawLine, 260, 390));
+      return {
+        referenceLine,
+        base,
+        level,
+        heat,
+        region
+      };
+    }
+
+    function evaluateByThreshold(inputTotal, referenceLine) {
+      const delta = inputTotal - referenceLine;
+      let tier = "risk";
+      if (inputTotal >= referenceLine + 20) tier = "safe";
+      else if (inputTotal >= referenceLine + 5) tier = "stable";
+      else if (inputTotal >= referenceLine - 10) tier = "sprint";
+      return { tier, delta };
+    }
+
+    function estimatedScoreEvaluation(unit, major, input, reason) {
+      const estimate = estimateReferenceLine(unit, major);
+      const evaluation = evaluateByThreshold(input.total, estimate.referenceLine);
+      const meta = scoreTierMeta[evaluation.tier];
+      const reasonText = reason || "暂无该校该专业真实复试线";
+      return {
+        tier: evaluation.tier,
+        meta,
+        lines: [],
+        sourceType: "estimated",
+        isEstimated: true,
+        sourceRank: scoreSourceRank("estimated"),
+        referenceLine: estimate.referenceLine,
+        delta: evaluation.delta,
+        estimate,
+        summary: `${meta.label} · 估算参考线${estimate.referenceLine}`,
+        badgeLine: `估算参考 · ${estimate.referenceLine}`,
+        detail: `${reasonText}；按${estimate.base.label}、${estimate.level.label}、${estimate.heat.label}、${estimate.region.label}估算参考线 ${estimate.referenceLine}。你的总分 ${input.total}，相对参考线 ${signedScore(evaluation.delta)}。这不是学校真实复试线，仅用于第一轮择校初筛。`
+      };
+    }
+
+    function singleSubjectProblems(lines, input) {
+      const problems = [];
+      lines.forEach((line) => {
+        [
+          ["政治", input.politics, line.politics],
+          ["外语", input.foreignLanguage, line.foreignLanguage],
+          ["业务课一", input.business1, line.business1],
+          ["业务课二", input.business2, line.business2]
+        ].forEach(([label, score, lineScore]) => {
+          if (score !== null && lineScore !== null && score < lineScore) {
+            problems.push(`${label}${score}<${lineScore}`);
+          }
+        });
+      });
+      return unique(problems);
+    }
+
+    function scoreEvaluationForUnit(unit) {
+      const metaInactive = scoreTierMeta.inactive;
+      const major = selectedMajor();
+      if (!major) {
+        return { tier: "inactive", meta: metaInactive, lines: [], sourceType: "inactive", sourceRank: scoreSourceRank("inactive"), summary: "先选择专业", detail: "选择具体专业后，页面会按需加载该专业的远程复试线小文件。" };
+      }
+      if (!hasScoreInput()) {
+        return { tier: "inactive", meta: metaInactive, lines: [], sourceType: "inactive", sourceRank: scoreSourceRank("inactive"), summary: "输入总分后评估", detail: "输入预估总分后，可以按近三年真实复试线或估算参考线分为冲刺、稳妥、保底和风险较高。" };
+      }
+      const input = scoreInputs();
+      if (scoreState.status === "loading") {
+        return { tier: "inactive", meta: metaInactive, lines: [], sourceType: "inactive", sourceRank: scoreSourceRank("inactive"), summary: "分数线加载中", detail: "正在加载该专业远程复试线小文件。" };
+      }
+      if (scoreState.majorCode !== major.code) {
+        return estimatedScoreEvaluation(unit, major, input, "当前专业真实复试线尚未完成加载");
+      }
+      if (scoreState.status !== "ready") {
+        return estimatedScoreEvaluation(unit, major, input, "该专业暂无可用真实复试线小文件");
+      }
+      const lines = latestThreeScoreLines(unit);
+      if (!lines.length) {
+        return estimatedScoreEvaluation(unit, major, input, "这个学校在该专业小文件中暂时没有近三年真实复试线");
+      }
+      const totals = lines.map((line) => line.totalScore).filter((value) => value !== null);
+      const maxLine = Math.max(...totals);
+      const minLine = Math.min(...totals);
+      const latestLine = lines[0].totalScore;
+      const avgLine = Math.round(totals.reduce((sum, value) => sum + value, 0) / totals.length);
+      const problems = singleSubjectProblems(lines, input);
+      let tier = "risk";
+      if (problems.length) tier = "risk";
+      else if (input.total >= maxLine + 20) tier = "safe";
+      else if (input.total >= maxLine + 5) tier = "stable";
+      else if (input.total >= minLine - 5 || input.total >= latestLine - 10) tier = "sprint";
+      const meta = scoreTierMeta[tier];
+      const delta = input.total - maxLine;
+      const lineText = lines.map((line) => `${line.year}:${line.totalScore}`).join(" / ");
+      const subjectText = problems.length ? `；单科风险：${problems.join("、")}` : "";
+      return {
+        tier,
+        meta,
+        lines,
+        sourceType: "real",
+        isEstimated: false,
+        sourceRank: scoreSourceRank("real"),
+        referenceLine: maxLine,
+        maxLine,
+        minLine,
+        latestLine,
+        avgLine,
+        delta,
+        summary: `${meta.label} · 真实三年高线${maxLine}`,
+        badgeLine: `真实线 · ${lineText}`,
+        detail: `按真实复试线评估。你的总分 ${input.total}，该校该专业近三年最高线 ${maxLine}、平均线 ${avgLine}、最近一年 ${latestLine}，相对最高线 ${signedScore(delta)}。${lineText}${subjectText}`
+      };
+    }
+
+    function targetScoreForUnit(unit) {
+      const major = selectedMajor();
+      if (!unit || !major) return { sourceType: "none", line: null, lines: [], referenceLine: null, summary: "暂无目标分" };
+      const lines = latestThreeScoreLines(unit);
+      if (lines.length) {
+        const maxLine = Math.max(...lines.map((line) => line.totalScore).filter((value) => value !== null));
+        return {
+          sourceType: "real",
+          line: maxLine,
+          lines,
+          referenceLine: maxLine,
+          summary: lines.map((line) => `${line.year}:${line.totalScore}`).join(" / ")
+        };
+      }
+      const estimate = estimateReferenceLine(unit, major);
+      return {
+        sourceType: "estimated",
+        line: estimate.referenceLine,
+        lines: [],
+        referenceLine: estimate.referenceLine,
+        estimate,
+        summary: `${estimate.base.label} · ${estimate.level.label} · ${estimate.heat.label} · ${estimate.region.label}`
+      };
+    }
+
+    function targetSubjectProblems(targetScore, input) {
+      if (!targetScore.lines.length) return [];
+      return singleSubjectProblems(targetScore.lines, input);
+    }
+
+    function targetGapTier(gap) {
+      if (gap === null) return { label: "待估分", className: "empty" };
+      if (gap <= -30) return { label: "基础补强", className: "risk" };
+      if (gap <= -10) return { label: "提分冲刺", className: "sprint" };
+      if (gap <= 9) return { label: "临界稳定", className: "stable" };
+      return { label: "稳住优势", className: "safe" };
+    }
+
+    function subjectCategoryFromProblem(problem) {
+      if (String(problem || "").startsWith("政治")) return "政治";
+      if (String(problem || "").startsWith("外语")) return "外语";
+      return "专业课";
+    }
+
+    function makeTask(id, category, duration, text) {
+      return { id, category, duration, text };
+    }
+
+    function dailyTasksForTarget(unit, targetScore, input, problems) {
+      const major = selectedMajor();
+      const majorName = major?.name || "专业课";
+      const schoolName = unit?.name || "目标院校";
+      if (input.total === null) {
+        return [
+          makeTask("school-info", "院校信息", "30 分钟", `整理 ${schoolName} 的招生目录、复试线和参考书信息。`),
+          makeTask("major-core", "专业课", "70 分钟", `完成 1 个 ${majorName} 核心知识块，并写出 5 条易错点。`),
+          makeTask("foreign-basic", "外语", "40 分钟", "完成外语词汇或阅读训练，记录高频错词。"),
+          makeTask("review-book", "复盘", "20 分钟", "更新错题本：按知识点归类今天最容易丢分的问题。")
+        ];
+      }
+      const gap = input.total - targetScore.referenceLine;
+      const subjectTask = problems.length
+        ? makeTask("subject-risk", subjectCategoryFromProblem(problems[0]), "45 分钟", `优先补单科风险：${problems[0]}，完成一组对应专项练习并复盘原因。`)
+        : makeTask("subject-floor", "政治", "25 分钟", "保持单科底线：完成一组政治/外语小题，检查是否低于目标线要求。");
+      if (gap <= -30) {
+        return [
+          makeTask("major-backbone", "专业课", "90 分钟", `目标差距 ${Math.abs(gap)} 分，今天先补 ${majorName} 主干知识。`),
+          makeTask("basic-drill", "专业课", "45 分钟", "完成 30 道基础题，错题必须写出对应公式、概念或解题入口。"),
+          makeTask("foreign-reading", "外语", "50 分钟", "外语完成 50 个高频词和 2 篇阅读精读。"),
+          subjectTask,
+          makeTask("night-review", "复盘", "15 分钟", "睡前复盘今天新增错题，标出明天最先处理的 3 个点。")
+        ];
+      }
+      if (gap <= -10) {
+        return [
+          makeTask("timed-set", "专业课", "70 分钟", `距离目标线 ${Math.abs(gap)} 分，今天安排 1 组限时真题或模拟题。`),
+          makeTask("weak-topic", "专业课", "60 分钟", `针对 ${majorName} 的薄弱章节做专项训练。`),
+          makeTask("wrong-type", "复盘", "25 分钟", "把最近 7 天错题按题型统计，选出现频最高的 2 类集中处理。"),
+          subjectTask,
+          makeTask("score-review", "复盘", "20 分钟", "晚间复盘一套提分清单：会做但错、不会做、时间不够各列 3 条。")
+        ];
+      }
+      if (gap <= 9) {
+        return [
+          makeTask("stability-set", "专业课", "60 分钟", "当前接近目标线，今天重点减少失误，完成 1 组限时训练。"),
+          makeTask("mistake-stats", "复盘", "30 分钟", "复盘最近一次模拟：把粗心、审题、公式、计算错误分开统计。"),
+          subjectTask,
+          makeTask("school-lines", "院校信息", "25 分钟", `整理 ${schoolName} 近三年复试线和学院方向，确认目标是否稳定。`),
+          makeTask("high-yield", "复盘", "15 分钟", "睡前只复习高收益错题，不新增大量陌生内容。")
+        ];
+      }
+      return [
+        makeTask("maintain-set", "专业课", "60 分钟", `已高出目标线 ${gap} 分，今天保持手感，完成 1 组中等强度套题。`),
+        makeTask("retest-info", "院校信息", "30 分钟", "整理目标院校复试材料清单：导师方向、学院通知、往年复试内容。"),
+        makeTask("advanced-major", "专业课", "45 分钟", "专业课做拔高题，重点训练表达完整度。"),
+        subjectTask,
+        makeTask("advantage-template", "复盘", "20 分钟", "复盘优势科目，保留 3 个稳定得分模板。")
+      ];
+    }
+
+    function todayKey() {
+      const now = new Date();
+      const yyyy = now.getFullYear();
+      const mm = String(now.getMonth() + 1).padStart(2, "0");
+      const dd = String(now.getDate()).padStart(2, "0");
+      return `${yyyy}-${mm}-${dd}`;
+    }
+
+    function taskIdentity(task) {
+      return [task.id, task.category, task.duration, task.text].join("|");
+    }
+
+    function simpleHash(value) {
+      let hash = 0;
+      const text = String(value || "");
+      for (let i = 0; i < text.length; i += 1) {
+        hash = ((hash << 5) - hash + text.charCodeAt(i)) | 0;
+      }
+      return Math.abs(hash).toString(36);
+    }
+
+    function dailyTaskStorageKey(unit, targetScore, input, tasks) {
+      const major = selectedMajor();
+      const raw = [
+        todayKey(),
+        major?.code || "",
+        unit?.code || unit?.name || "",
+        input.total ?? "no-total",
+        targetScore.sourceType,
+        targetScore.referenceLine ?? "",
+        tasks.map(taskIdentity).join("~")
+      ].join("@@");
+      return `kaoyan-daily-tasks:${simpleHash(raw)}`;
+    }
+
+    function readDailyTaskCompletion(key) {
+      try {
+        const values = JSON.parse(localStorage.getItem(key) || "[]");
+        return new Set(Array.isArray(values) ? values : []);
+      } catch {
+        return new Set();
+      }
+    }
+
+    function writeDailyTaskCompletion(key, completed) {
+      try {
+        localStorage.setItem(key, JSON.stringify([...completed]));
+      } catch {
+        // Ignore storage failures; the checklist still works for the current render.
+      }
+    }
+
+    function customDailyTaskStorageKey(key) {
+      return `${key}:custom`;
+    }
+
+    function readCustomDailyTasks(key) {
+      try {
+        const values = JSON.parse(localStorage.getItem(customDailyTaskStorageKey(key)) || "[]");
+        if (!Array.isArray(values)) return [];
+        return values
+          .map((task) => ({
+            id: String(task.id || ""),
+            category: String(task.category || "自定义"),
+            duration: String(task.duration || "自定"),
+            text: String(task.text || "").trim(),
+            custom: true
+          }))
+          .filter((task) => task.id && task.text);
+      } catch {
+        return [];
+      }
+    }
+
+    function writeCustomDailyTasks(key, tasks) {
+      try {
+        localStorage.setItem(customDailyTaskStorageKey(key), JSON.stringify(tasks));
+      } catch {
+        // Ignore storage failures; generated tasks remain usable.
+      }
+    }
+
+    function addCustomDailyTask(key, task) {
+      const tasks = readCustomDailyTasks(key);
+      tasks.push({
+        id: `custom-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`,
+        category: task.category,
+        duration: task.duration,
+        text: task.text,
+        custom: true
+      });
+      writeCustomDailyTasks(key, tasks);
+    }
+
+    function removeCustomDailyTask(key, taskId) {
+      const tasks = readCustomDailyTasks(key).filter((task) => task.id !== taskId);
+      writeCustomDailyTasks(key, tasks);
+      const completed = readDailyTaskCompletion(key);
+      [...completed].forEach((identity) => {
+        if (identity.startsWith(`${taskId}|`)) completed.delete(identity);
+      });
+      writeDailyTaskCompletion(key, completed);
+    }
+
+    function scoreBadgeHtml(unit) {
+      const result = scoreEvaluationForUnit(unit);
+      const lineText = result.lines?.length
+        ? result.lines.map((line) => `${line.year} ${line.totalScore}`).join(" / ")
+        : result.summary;
+      const sourceClass = result.sourceType === "estimated" ? "estimated" : "";
+      return `
+        <div class="score-badge ${result.meta.className} ${sourceClass}">
+          <strong>${escapeHtml(result.meta.label)}</strong>
+          <span class="code">${escapeHtml(result.badgeLine || lineText)}</span>
+        </div>
+      `;
+    }
+
+    function scoreSummaryCounts(list) {
+      const counts = { safe: 0, stable: 0, sprint: 0, risk: 0, none: 0, real: 0, estimated: 0 };
+      list.forEach((unit) => {
+        const result = scoreEvaluationForUnit(unit);
+        if (Object.prototype.hasOwnProperty.call(counts, result.tier)) counts[result.tier] += 1;
+        if (result.sourceType === "real") counts.real += 1;
+        if (result.sourceType === "estimated") counts.estimated += 1;
+      });
+      return counts;
+    }
+
+    function renderTargetWall() {
+      const major = selectedMajor();
+      els.targetFromSelectedBtn.disabled = !state.selectedId || !major;
+      els.applyTargetBtn.disabled = !major;
+      if (!major) {
+        els.targetWallBody.innerHTML = `<div class="target-message">先选择一个具体专业，再填写目标学校。</div>`;
+        return;
+      }
+      const target = findTargetUnit();
+      if (target.status === "empty") {
+        els.targetWallBody.innerHTML = `<div class="target-message">输入目标学校后，这里会按目标分和你的预估分生成今天的任务清单。</div>`;
+        return;
+      }
+      if (target.status === "not-found") {
+        els.targetWallBody.innerHTML = `<div class="target-message">没有找到匹配“${escapeHtml(state.targetQuery)}”的招生单位。可以输入学校全称或院校代码。</div>`;
+        return;
+      }
+      if (target.status === "major-mismatch") {
+        const names = target.candidates.slice(0, 3).map((unit) => `${unit.name} ${unit.code || ""}`).join("、");
+        els.targetWallBody.innerHTML = `<div class="target-message">找到了 ${escapeHtml(names)}，但当前专业未匹配该招生单位。</div>`;
+        return;
+      }
+
+      const unit = target.unit;
+      const input = scoreInputs();
+      const targetScore = targetScoreForUnit(unit);
+      const gap = input.total === null ? null : input.total - targetScore.referenceLine;
+      const tier = targetGapTier(gap);
+      const problems = targetSubjectProblems(targetScore, input);
+      const generatedTasks = dailyTasksForTarget(unit, targetScore, input, problems);
+      const storageKey = dailyTaskStorageKey(unit, targetScore, input, generatedTasks);
+      const customTasks = readCustomDailyTasks(storageKey);
+      const tasks = [...generatedTasks, ...customTasks];
+      const completed = readDailyTaskCompletion(storageKey);
+      const completedCount = tasks.filter((task) => completed.has(taskIdentity(task))).length;
+      const sourceChip = targetScore.sourceType === "real"
+        ? `<span class="chip blue">真实复试线</span>`
+        : `<span class="chip estimated">估算参考</span>`;
+      const gapText = gap === null ? "输入总分后计算" : `${input.total} / ${targetScore.referenceLine}（${signedScore(gap)}）`;
+      const riskText = problems.length ? problems.join("、") : "暂无已填单科风险";
+      const headline = gap === null
+        ? "先按目标院校建立今日学习节奏"
+        : `${tier.label}：围绕 ${signedScore(gap)} 分差距安排今天`;
+      els.targetWallBody.innerHTML = `
+        <div class="target-wall-grid">
+          <div class="target-card">
+            <span class="label">目标学校</span>
+            <strong>${escapeHtml(unit.name)}</strong>
+            <p>${escapeHtml(unit.provinceName)} · ${(unit.tags || ["普通"]).map(escapeHtml).join(" / ")}</p>
+          </div>
+          <div class="target-card">
+            <span class="label">目标分</span>
+            <strong>${targetScore.referenceLine ?? "--"}</strong>
+            <p>${sourceChip} <span class="chip ${tier.className}">${escapeHtml(tier.label)}</span></p>
+          </div>
+          <div class="target-card">
+            <span class="label">当前差距</span>
+            <strong>${escapeHtml(gapText)}</strong>
+            <p>${escapeHtml(riskText)}</p>
+          </div>
+        </div>
+        <div class="chips">
+          <span class="chip">${escapeHtml(major.code)} ${escapeHtml(major.name)}</span>
+          <span class="chip">${escapeHtml(targetScore.summary)}</span>
+        </div>
+        <div class="daily-task-headline">
+          <strong>${escapeHtml(headline)}</strong>
+          <span class="daily-progress">今日完成 ${completedCount}/${tasks.length}</span>
+        </div>
+        <form class="custom-task-form" data-custom-task-form data-daily-task-key="${escapeHtml(storageKey)}">
+          <div class="field">
+            <label for="customTaskText">自定义任务</label>
+            <input id="customTaskText" name="text" type="text" placeholder="例如：背 100 个单词" autocomplete="off" />
+          </div>
+          <div class="field">
+            <label for="customTaskCategory">分类</label>
+            <select id="customTaskCategory" name="category">
+              <option value="专业课">专业课</option>
+              <option value="外语">外语</option>
+              <option value="政治">政治</option>
+              <option value="复盘">复盘</option>
+              <option value="院校信息">院校信息</option>
+              <option value="自定义">自定义</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="customTaskDuration">时长</label>
+            <input id="customTaskDuration" name="duration" type="text" placeholder="30 分钟" autocomplete="off" />
+          </div>
+          <button class="btn primary" type="submit">添加</button>
+        </form>
+        <ul class="daily-task-list">
+          ${tasks.map((task) => {
+            const identity = taskIdentity(task);
+            const done = completed.has(identity);
+            return `
+              <li>
+                <div class="daily-task-item ${done ? "done" : ""}">
+                  <input
+                    class="daily-task-check"
+                    type="checkbox"
+                    ${done ? "checked" : ""}
+                    data-daily-task-key="${escapeHtml(storageKey)}"
+                    data-daily-task-id="${escapeHtml(identity)}"
+                  />
+                  <span class="daily-task-main">
+                    <strong>${escapeHtml(task.text)}</strong>
+                    <span class="daily-task-meta">
+                      <span class="chip">${escapeHtml(task.category)}</span>
+                      <span>${escapeHtml(task.duration)}</span>
+                      ${task.custom ? `<span class="chip green">自定义</span>` : ""}
+                    </span>
+                  </span>
+                  ${task.custom ? `<button class="task-delete-btn" type="button" data-delete-custom-task-id="${escapeHtml(task.id)}" data-daily-task-key="${escapeHtml(storageKey)}">删除</button>` : ""}
+                </div>
+              </li>
+            `;
+          }).join("")}
+        </ul>
+      `;
+    }
+
+    function renderScoreAdvisorStatus(list = getFilteredUnits()) {
+      const major = selectedMajor();
+      els.reloadScoreBtn.disabled = !major;
+      if (!major) {
+        if (els.scoreStatus) els.scoreStatus.textContent = "";
+        els.scoreSummary.textContent = "先在上方选择具体专业，再输入预估总分。";
+        return;
+      }
+      if (els.scoreStatus) els.scoreStatus.textContent = scoreState.message;
+      const input = scoreInputs();
+      if (scoreState.status === "loading") {
+        els.scoreSummary.innerHTML = `<span class="chip">正在加载 ${escapeHtml(scoreFileUrl(major))}</span>`;
+        return;
+      }
+      const totalLines = scoreState.data?.lines?.length || 0;
+      if (!hasScoreInput()) {
+        const sourceText = scoreState.status === "ready"
+          ? `已加载 ${totalLines} 条真实复试线，缺口将用估算参考`
+          : "输入总分后使用估算参考线初筛";
+        els.scoreSummary.innerHTML = [
+          `<span class="chip blue">${escapeHtml(major.code)} ${escapeHtml(major.name)}</span>`,
+          `<span>${sourceText}</span>`
+        ].join("");
+        return;
+      }
+      const counts = scoreSummaryCounts(list);
+      els.scoreSummary.innerHTML = [
+        `<span>预估总分 ${input.total}</span>`,
+        `<span class="chip safe">保底 ${counts.safe}</span>`,
+        `<span class="chip stable">稳妥 ${counts.stable}</span>`,
+        `<span class="chip sprint">冲刺 ${counts.sprint}</span>`,
+        `<span class="chip risk">风险较高 ${counts.risk}</span>`,
+        `<span class="chip blue">真实线 ${counts.real}</span>`,
+        `<span class="chip estimated">估算参考 ${counts.estimated}</span>`,
+        counts.none ? `<span class="chip empty">暂无依据 ${counts.none}</span>` : ""
+      ].filter(Boolean).join("");
+    }
+
+    async function loadScoreDataForSelectedMajor(options = {}) {
+      const major = selectedMajor();
+      const requestId = ++scoreState.requestId;
+      if (!major || !major.code) {
+        scoreState.majorCode = "";
+        scoreState.status = "idle";
+        scoreState.data = null;
+        scoreState.message = "选择具体专业后加载远程复试线小文件。";
+        render();
+        return;
+      }
+      const url = scoreFileUrl(major);
+      if (!options.force && scoreCache.has(major.code)) {
+        scoreState.majorCode = major.code;
+        scoreState.status = "ready";
+        scoreState.data = scoreCache.get(major.code);
+        scoreState.message = `已加载 ${url}，共 ${scoreState.data.lines.length} 条真实复试线；缺口使用估算参考线。`;
+        render();
+        return;
+      }
+      scoreState.majorCode = major.code;
+      scoreState.status = "loading";
+      scoreState.data = null;
+      scoreState.error = "";
+      scoreState.message = `正在加载 ${url}...`;
+      render();
+      try {
+        const response = await fetch(url, { cache: options.force ? "reload" : "default" });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const payload = await response.json();
+        if (requestId !== scoreState.requestId) return;
+        const normalized = normalizeScoreData(payload, major);
+        scoreCache.set(major.code, normalized);
+        scoreState.status = normalized.lines.length ? "ready" : "empty";
+        scoreState.data = normalized.lines.length ? normalized : null;
+        scoreState.message = normalized.lines.length
+          ? `已加载 ${url}，共 ${normalized.lines.length} 条真实复试线；缺口使用估算参考线。`
+          : "当前专业使用估算参考线初筛。";
+      } catch (error) {
+        if (requestId !== scoreState.requestId) return;
+        scoreState.status = "missing";
+        scoreState.data = null;
+        scoreState.error = error.message;
+        scoreState.message = "当前专业使用估算参考线初筛。";
+      }
+      render();
+    }
+
+    function majorGroupKey(major) {
+      return [
+        major.degreeType || "未标明学位类型",
+        major.categoryCode || "",
+        major.categoryName || "未标明门类"
+      ].join("|");
+    }
+
+    function majorGroupLabelFromKey(key) {
+      const [degreeType, categoryCode, categoryName] = key.split("|");
+      const category = [categoryCode, categoryName].filter(Boolean).join(" ");
+      return `${degreeType} / ${category || "未标明门类"}`;
+    }
+
+    function majorDisciplineKey(major) {
+      return [
+        major.disciplineCode || "",
+        major.disciplineName || "未标明一级学科"
+      ].join("|");
+    }
+
+    function majorDisciplineLabelFromKey(key) {
+      const [disciplineCode, disciplineName] = key.split("|");
+      return [disciplineCode, disciplineName].filter(Boolean).join(" ") || "未标明一级学科";
+    }
+
+    function majorMatchesGroup(major) {
+      return state.majorGroup === "all" || majorGroupKey(major) === state.majorGroup;
+    }
+
+    function majorMatchesDiscipline(major) {
+      return state.majorDiscipline === "all" || majorDisciplineKey(major) === state.majorDiscipline;
+    }
+
+    function getMajorsForGroup() {
+      return majors.filter((major) => majorMatchesGroup(major));
+    }
+
+    function getMajorsForMajorSelect() {
+      return majors.filter((major) =>
+        majorMatchesGroup(major)
+        && majorMatchesDiscipline(major)
+        && majorMatchesSearch(major)
+      );
+    }
+
+    function shouldShowMajorOptions() {
+      return state.majorGroup !== "all"
+        || state.majorDiscipline !== "all"
+        || Boolean(state.majorQuery)
+        || state.major !== "all";
+    }
+
+    function currentMajorScopeLabel() {
+      const parts = [];
+      if (state.majorGroup !== "all") parts.push(majorGroupLabelFromKey(state.majorGroup));
+      if (state.majorDiscipline !== "all") parts.push(majorDisciplineLabelFromKey(state.majorDiscipline));
+      if (state.majorQuery) parts.push(`搜索“${state.majorQuery}”`);
+      return parts.length ? parts.join(" · ") : "全部专业范围";
+    }
+
+    function majorStateFromSelected(major) {
+      if (!major) return {};
+      return {
+        majorGroup: majorGroupKey(major),
+        majorDiscipline: majorDisciplineKey(major)
+      };
+    }
+
+    function ensureMajorState() {
+      if (state.majorGroup !== "all" && !majors.some((major) => majorGroupKey(major) === state.majorGroup)) {
+        state.majorGroup = "all";
+      }
+      if (state.majorDiscipline !== "all" && !getMajorsForGroup().some((major) => majorDisciplineKey(major) === state.majorDiscipline)) {
+        state.majorDiscipline = "all";
+      }
+      const selected = selectedMajor();
+      if (state.major !== "all" && (!selected || !majorMatchesGroup(selected) || !majorMatchesDiscipline(selected))) {
+        state.major = "all";
+      }
+    }
+
+    function majorFilterOptionLabel(major) {
+      return `${major.code || ""} ${major.name || "未命名专业"} · ${major.unitCount || 0}所`;
+    }
+
+    function majorFilterGroupLabel(major) {
+      return majorDisciplineLabelFromKey(majorDisciplineKey(major));
+    }
+
+    function renderMajorGroupOptions() {
+      const groups = new Map();
+      majors.forEach((major) => {
+        const key = majorGroupKey(major);
+        if (!groups.has(key)) {
+          groups.set(key, {
+            label: majorGroupLabelFromKey(key),
+            categoryCode: major.categoryCode || "",
+            count: 0
+          });
+        }
+        groups.get(key).count += 1;
+      });
+      const degreeOrder = new Map([["学术学位", 1], ["专业学位", 2]]);
+      const groupedOptions = new Map();
+      Array.from(groups.entries())
+        .sort(([, a], [, b]) =>
+          (degreeOrder.get(a.label.split(" / ")[0]) || 99) - (degreeOrder.get(b.label.split(" / ")[0]) || 99)
+          || String(a.categoryCode).localeCompare(String(b.categoryCode))
+          || a.label.localeCompare(b.label, "zh-Hans-CN")
+        )
+        .forEach(([key, group]) => {
+          const degreeType = group.label.split(" / ")[0] || "未标明学位类型";
+          if (!groupedOptions.has(degreeType)) groupedOptions.set(degreeType, []);
+          groupedOptions.get(degreeType).push(
+            `<option value="${escapeHtml(key)}">${escapeHtml(group.label.replace(`${degreeType} / `, ""))}（${group.count}）</option>`
+          );
+        });
+      const options = Array.from(groupedOptions.entries())
+        .map(([degreeType, items]) => `<optgroup label="${escapeHtml(degreeType)}">${items.join("")}</optgroup>`)
+        .join("");
+      els.majorGroupFilter.innerHTML = `<option value="all">全部学位与门类（${majors.length}）</option>${options}`;
+      els.majorGroupFilter.value = state.majorGroup;
+    }
+
+    function renderMajorDisciplineOptions() {
+      const groupMajors = getMajorsForGroup();
+      const disciplines = new Map();
+      groupMajors.forEach((major) => {
+        const key = majorDisciplineKey(major);
+        if (!disciplines.has(key)) {
+          disciplines.set(key, {
+            label: majorDisciplineLabelFromKey(key),
+            disciplineCode: major.disciplineCode || "",
+            count: 0
+          });
+        }
+        disciplines.get(key).count += 1;
+      });
+      const options = Array.from(disciplines.entries())
+        .sort(([, a], [, b]) =>
+          String(a.disciplineCode).localeCompare(String(b.disciplineCode))
+          || a.label.localeCompare(b.label, "zh-Hans-CN")
+        )
+        .map(([key, discipline]) => `<option value="${escapeHtml(key)}">${escapeHtml(discipline.label)}（${discipline.count}）</option>`)
+        .join("");
+      els.majorDisciplineFilter.innerHTML = `<option value="all">全部一级学科（${groupMajors.length}）</option>${options}`;
+      els.majorDisciplineFilter.value = state.majorDiscipline;
+      els.majorDisciplineFilter.disabled = state.majorGroup === "all";
+    }
+
+    function renderMajorFilterOptions() {
+      const selected = selectedMajor();
+      const results = shouldShowMajorOptions() ? getMajorSearchResults() : [];
+      const optionMajors = selected && !results.some((major) => major.id === selected.id)
+        ? [selected, ...results]
+        : results;
+      const groups = new Map();
+      optionMajors.forEach((major) => {
+        const label = majorFilterGroupLabel(major);
+        if (!groups.has(label)) groups.set(label, []);
+        groups.get(label).push(major);
+      });
+
+      const groupHtml = Array.from(groups.entries()).map(([label, items]) => `
+        <optgroup label="${escapeHtml(label)}">
+          ${items.map((major) => `<option value="${escapeHtml(major.id)}">${escapeHtml(majorFilterOptionLabel(major))}</option>`).join("")}
+        </optgroup>
+      `).join("");
+
+      const hint = shouldShowMajorOptions()
+        ? (optionMajors.length ? "" : `<option value="__empty" disabled>没有匹配专业</option>`)
+        : `<option value="__hint" disabled>先选择学位/门类或搜索专业</option>`;
+      els.majorFilter.innerHTML = `<option value="all">全部专业</option>${hint}${groupHtml}`;
+      els.majorFilter.value = state.major;
+    }
+
+    function initFilters() {
+      optionList(els.provinceFilter, data.provinces.map((p) => p.name), "全部省份");
+      optionList(els.tagFilter, unique(units.flatMap((u) => u.tags || [])), "全部标签");
+      optionList(els.supervisorFilter, unique(units.map(supervisorGroup)), "全部主管部门");
+      els.languageFilter.innerHTML = languageCatalog.map((item) => `<option value="${item.id}">${item.name}</option>`).join("");
+      renderMajorGroupOptions();
+      renderMajorDisciplineOptions();
+      renderMajorFilterOptions();
+      optionList(els.sortFilter, ["省份顺序", "学校名称", "主管部门", "代码"], "省份顺序");
+    }
+
+    function syncControls() {
+      els.searchInput.value = state.query;
+      els.majorGroupFilter.value = state.majorGroup;
+      els.majorDisciplineFilter.value = state.majorDiscipline;
+      els.majorDisciplineFilter.disabled = state.majorGroup === "all";
+      els.majorSearchInput.value = state.majorQuery;
+      els.targetSchoolInput.value = state.targetQuery;
+      els.scoreTotalInput.value = state.scoreTotal;
+      els.scorePoliticsInput.value = state.scorePolitics;
+      els.scoreForeignInput.value = state.scoreForeign;
+      els.scoreBusiness1Input.value = state.scoreBusiness1;
+      els.scoreBusiness2Input.value = state.scoreBusiness2;
+      els.provinceFilter.value = state.province;
+      els.tagFilter.value = state.tag;
+      els.supervisorFilter.value = state.supervisor;
+      els.languageFilter.value = state.language;
+      els.majorFilter.value = state.major;
+      els.sortFilter.value = state.sort;
+    }
+
+    function applyFilters(next) {
+      Object.assign(state, next);
+      ensureMajorState();
+      syncControls();
+      render();
+    }
+
+    function resetFilters() {
+      Object.assign(state, {
+        query: "",
+        province: "全部省份",
+        tag: "全部标签",
+        supervisor: "全部主管部门",
+        language: "all",
+        majorGroup: "all",
+        majorDiscipline: "all",
+        majorQuery: "",
+        major: "all",
+        targetQuery: "",
+        scoreTotal: "",
+        scorePolitics: "",
+        scoreForeign: "",
+        scoreBusiness1: "",
+        scoreBusiness2: "",
+        sort: "省份顺序",
+        selectedId: ""
+      });
+      syncControls();
+      render();
+    }
+
+    function renderStats() {
+      els.sourceLine.textContent = `${data.source} · ${data.fetchedAt}`;
+      els.totalUnits.textContent = data.totalUnits || units.length;
+      els.totalProvinces.textContent = data.provinces.length;
+      els.doubleFirstCount.textContent = countWhere(units, (u) => hasTag(u, "双一流"));
+      els.graduateSchoolCount.textContent = countWhere(units, (u) => hasTag(u, "研究生院"));
+      els.selfMarkingCount.textContent = countWhere(units, (u) => hasTag(u, "自划线"));
+      document.querySelectorAll("[data-tag-filter]").forEach((item) => {
+        item.classList.toggle("active", state.tag === item.dataset.tagFilter);
+      });
+      document.querySelectorAll("[data-filter-action='reset']").forEach((item) => {
+        item.classList.toggle("active", !state.query && !state.majorQuery && state.majorGroup === "all" && state.majorDiscipline === "all" && state.province === "全部省份" && state.tag === "全部标签" && state.supervisor === "全部主管部门" && state.language === "all" && state.major === "all");
+      });
+      document.querySelectorAll("[data-filter-action='all-provinces']").forEach((item) => {
+        item.classList.toggle("active", state.province === "全部省份");
+      });
+      document.querySelectorAll("[data-filter-action='all-supervisors']").forEach((item) => {
+        item.classList.toggle("active", state.supervisor === "全部主管部门");
+      });
+    }
+
+    function renderTopBars() {
+      const top = data.provinces
+        .map((p) => ({ ...p, filteredCount: countUnitsFor({ province: p.name }) }))
+        .sort((a, b) => b.filteredCount - a.filteredCount || b.unitCount - a.unitCount)
+        .slice(0, 6);
+      const max = Math.max(...top.map((p) => p.filteredCount), 1);
+      els.topProvinceBars.innerHTML = top.map((p, index) => `
+        <button class="bar-row ${state.province === p.name ? "active" : ""}" type="button" data-province-filter="${p.name}">
+          <span>${p.name}</span>
+          <span class="bar-track"><span style="--w:${Math.round((p.filteredCount / max) * 100)}; --accent:${colors[index % colors.length]};"></span></span>
+          <strong>${p.filteredCount}</strong>
+        </button>
+      `).join("");
+    }
+
+    function renderMajorFilterStatus() {
+      if (!majors.length) {
+        els.majorSearchMeta.textContent = "未加载 majors-data.js，暂时无法按具体专业筛选。";
+        return;
+      }
+      ensureMajorState();
+      renderMajorGroupOptions();
+      renderMajorDisciplineOptions();
+      renderMajorFilterOptions();
+      const selected = selectedMajor();
+      const results = getMajorSearchResults();
+      if (selected) {
+        const hasLoadedSubjects = subjectState.majorCode === selected.code && subjectState.status === "ready";
+        const coveredCount = hasLoadedSubjects
+          ? (selected.units || []).filter((unit) => exactSubjectRecordsFor(unit, selected).length).length
+          : 0;
+        const subjectChip = subjectState.majorCode === selected.code && subjectState.status === "loading"
+          ? `<span class="chip">初试科目加载中</span>`
+          : hasLoadedSubjects
+            ? `<span class="chip green">初试科目已加载 ${coveredCount} 所</span>`
+            : subjectState.majorCode === selected.code && ["missing", "empty"].includes(subjectState.status)
+              ? `<span class="chip empty">暂无初试科目文件</span>`
+              : `<span class="chip empty">初试科目待加载</span>`;
+        els.majorSearchMeta.innerHTML = [
+          `<span>当前专业：${escapeHtml(majorLabel(selected))}</span>`,
+          `<span class="chip blue">${escapeHtml(majorMeta(selected))}</span>`,
+          `<span>${selected.unitCount || 0} 所招生单位</span>`,
+          subjectChip
+        ].join("");
+      } else if (shouldShowMajorOptions()) {
+        els.majorSearchMeta.innerHTML = [
+          `<span>${escapeHtml(currentMajorScopeLabel())}</span>`,
+          `<span>可选 ${results.length} / ${majors.length} 个专业</span>`,
+          results[0] ? `<span>回车应用：${escapeHtml(majorLabel(results[0]))}</span>` : ""
+        ].filter(Boolean).join("");
+      } else {
+        els.majorSearchMeta.textContent = `请选择学位/门类后再选具体专业，共 ${majors.length} 个专业。`;
+      }
+    }
+
+    function renderProvinceList() {
+      const provinceCounts = data.provinces.map((p) => ({ ...p, filteredCount: countUnitsFor({ province: p.name }) }));
+      const max = Math.max(...provinceCounts.map((p) => p.filteredCount), 1);
+      const allButton = `
+        <button class="province-button ${state.province === "全部省份" ? "active" : ""}" type="button" data-province-filter="全部省份">
+          <strong>全国</strong>
+          <span>${countUnitsFor({ province: "全部省份" })} 所</span>
+          <span class="province-meter"><i style="--w:100;"></i></span>
+        </button>
+      `;
+      const provinceButtons = provinceCounts.map((p) => {
+        const active = state.province === p.name;
+        return `
+          <button class="province-button ${active ? "active" : ""}" type="button" data-province-filter="${p.name}">
+            <strong>${p.name}</strong>
+            <span>${p.filteredCount} 所</span>
+            <span class="province-meter"><i style="--w:${Math.round((p.filteredCount / max) * 100)};"></i></span>
+          </button>
+        `;
+      }).join("");
+      els.provinceList.innerHTML = allButton + provinceButtons;
+    }
+
+    function renderSummary(list) {
+      const selectedProvince = data.provinces.find((p) => p.name === state.province);
+      const scopeUnits = list;
+      const supervisors = unique(list.map(supervisorGroup));
+      const lang = selectedLanguage();
+      const major = selectedMajor();
+      const majorText = major ? majorLabel(major) : "全部专业";
+      const hasLoadedSubjects = major && subjectState.majorCode === major.code && subjectState.status === "ready";
+      const subjectCovered = hasLoadedSubjects ? list.filter((unit) => exactSubjectRecordsFor(unit, major).length).length : 0;
+      const subjectText = major
+        ? hasLoadedSubjects
+          ? ` · 初试科目已加载：${subjectCovered} 所`
+          : ` · 初试科目：${subjectState.majorCode === major.code ? subjectState.message : "待加载"}`
+        : "";
+
+      els.provinceTitle.textContent = selectedProvince ? `${selectedProvince.name}招生单位` : "全国招生单位";
+      els.provinceSubtitle.textContent = selectedProvince
+        ? `研招网院校库 ${selectedProvince.unitCount} 所，当前筛选显示 ${list.length} 所。`
+        : `31 个省级地区，当前筛选显示 ${list.length} 所。`;
+      els.provinceSource.href = selectedProvince ? selectedProvince.sourceUrl : "https://yz.chsi.com.cn/sch/";
+      els.visibleUnits.textContent = list.length;
+      els.provinceDoubleFirst.textContent = countWhere(scopeUnits, (u) => hasTag(u, "双一流"));
+      els.provinceGraduate.textContent = countWhere(scopeUnits, (u) => hasTag(u, "研究生院"));
+      els.provinceSupervisor.textContent = supervisors.length;
+      els.tableNote.textContent = `${state.province} · ${state.tag} · ${state.supervisor} · 初试外语：${lang.name} · 当前专业：${majorText}${subjectText}`;
+    }
+
+    function chipHtml(unit) {
+      const tags = unit.tags && unit.tags.length ? unit.tags : ["普通"];
+      return tags.map((tag) => {
+        const cls = tag === "双一流" ? "blue" : tag === "研究生院" ? "green" : tag === "自划线" ? "red" : "";
+        const active = state.tag === tag ? "active" : "";
+        if (tag === "普通") return `<span class="chip ${cls}">${tag}</span>`;
+        return `<button class="chip ${cls} ${active}" type="button" data-tag-filter="${tag}">${tag}</button>`;
+      }).join("");
+    }
+
+    function linkHtml(unit) {
+      const links = [
+        ["详情", unit.detailUrl],
+        ["公告", unit.announcementUrl],
+        ["简章", unit.brochureUrl],
+        ["咨询", unit.consultUrl],
+        ["目录", "https://yz.chsi.com.cn/zsml/"]
+      ].filter(([, href]) => href);
+      return links.map(([label, href]) => `<a href="${href}" target="_blank" rel="noreferrer">${label}</a>`).join("");
+    }
+
+    function renderTable(list) {
+      els.emptyState.hidden = list.length > 0;
+      els.unitTable.innerHTML = list.map((unit) => `
+        <tr data-id="${unit.id}" class="${state.selectedId === unit.id ? "active" : ""}">
+          <td>
+            <div class="school-name">${unit.name}</div>
+            <div class="code">${unit.code || "无代码"}</div>
+          </td>
+          <td>${unit.provinceName}</td>
+          <td>${unit.supervisor || "未标明"}<br><span class="code">${supervisorGroup(unit)}</span></td>
+          <td><div class="chips">${chipHtml(unit)}</div></td>
+          <td>${scoreBadgeHtml(unit)}</td>
+          <td>
+            <div class="links">${linkHtml(unit)}</div>
+            <div class="code">${languageMatchReason(unit)}</div>
+            <div class="code">${majorMatchReason(unit)}</div>
+          </td>
+        </tr>
+      `).join("");
+
+      els.unitTable.querySelectorAll("tr").forEach((row) => {
+        row.addEventListener("click", () => {
+          state.selectedId = row.dataset.id;
+          renderDetail(getFilteredUnits());
+          els.unitTable.querySelectorAll("tr").forEach((r) => r.classList.toggle("active", r.dataset.id === state.selectedId));
+        });
+      });
+    }
+
+    function renderDetail(list) {
+      const unit = list.find((item) => item.id === state.selectedId) || list[0] || units[0];
+      if (!unit) return;
+      const lang = selectedLanguage();
+      const major = selectedMajor();
+      const offering = findMajorOffering(unit, major);
+      const scoreResult = scoreEvaluationForUnit(unit);
+      const languageOverride = foreignLanguageOverride(unit, state.language);
+      const subjectMatch = exactSubjectMatchFor(unit, state.language, state.major);
+      const exactSubjectRecords = major ? exactSubjectRecordsFor(unit, major) : [];
+      state.selectedId = unit.id;
+      els.detailName.textContent = unit.name;
+      els.detailMeta.textContent = `${unit.provinceName} · ${unit.code || "无代码"} · ${unit.supervisor || "未标明"}`;
+      els.detailTags.innerHTML = chipHtml(unit);
+      els.detailLinks.innerHTML = linkHtml(unit);
+      if (major && subjectState.majorCode === major.code && subjectState.status === "loading") {
+        els.detailLanguage.textContent = `正在加载 ${subjectFileUrl(major)}，加载完成后按该专业方向级初试科目进行外语筛选。`;
+        els.detailLanguageTags.innerHTML = [
+          `<span class="chip blue">初试科目加载中</span>`,
+          `<span class="chip">${escapeHtml(major.code)}</span>`
+        ].join("");
+      } else if (exactSubjectRecords.length) {
+        const visibleSubjectRecords = subjectMatch.matchingRecords.length ? subjectMatch.matchingRecords : exactSubjectRecords;
+        const partialText = exactSubjectRecords.some((record) => record.isPartial)
+          ? "部分方向分页被研招网登录限制拦截，当前展示已抓到的方向记录。"
+          : "该专业方向初试科目已从研招网硕士专业目录抓取。";
+        els.detailLanguage.textContent = `当前初试外语筛选为“${lang.name}”。${unit.name} 的 ${majorLabel(major)} 已抓取 ${exactSubjectRecords.length} 条方向级初试科目记录，外语包含：${subjectForeignSummary(exactSubjectRecords)}。${partialText}${subjectRecordsBrief(visibleSubjectRecords) ? ` 科目示例：${subjectRecordsBrief(visibleSubjectRecords)}。` : ""}`;
+        els.detailLanguageTags.innerHTML = [
+          `<span class="chip blue">精确科目库</span>`,
+          `<span class="chip green">${exactSubjectRecords.length} 条方向</span>`,
+          ...foreignSubjectLabels(exactSubjectRecords).slice(0, 10).map((subject) => `<span class="chip">${escapeHtml(subject)}</span>`),
+          exactSubjectRecords.some((record) => record.isPartial) ? `<span class="chip estimated">分页可能未全</span>` : "",
+          exactSubjectRecords[0]?.sourceUrl ? `<a class="chip" href="${escapeHtml(exactSubjectRecords[0].sourceUrl)}" target="_blank" rel="noreferrer">研招网目录</a>` : ""
+        ].filter(Boolean).join("");
+      } else {
+        els.detailLanguage.textContent = `当前初试外语筛选为“${lang.name}”，该单位进入表格的原因是：${languageMatchReason(unit)}。该筛选是候选线索，不是全量精确科目库；请进入该单位招生简章或研招网硕士目录，按具体专业方向核对初试外语科目是否为 ${lang.subjects.join("、")}。`;
+        els.detailLanguageTags.innerHTML = [
+          `<span class="chip blue">${lang.code}</span>`,
+          `<span class="chip green">${lang.type}</span>`,
+          ...lang.subjects.map((subject) => `<span class="chip">${subject}</span>`),
+          languageOverride?.sourceUrl ? `<a class="chip" href="${escapeHtml(languageOverride.sourceUrl)}" target="_blank" rel="noreferrer">官网校正依据</a>` : ""
+        ].filter(Boolean).join("");
+      }
+      if (!major) {
+        els.detailMajor.textContent = "当前未选择具体专业。";
+        els.detailMajorTags.innerHTML = `<span class="chip">全部专业</span>`;
+      } else if (offering) {
+        const total = major.reportedUnitCount || major.unitCount || 0;
+        const partial = major.isPartial ? `本地已抓取 ${major.unitCount} / 官网显示 ${total} 所，继续抓取需要命令行获得研招网登录态。` : `已抓取该专业全部 ${major.unitCount} 所。`;
+        els.detailMajor.textContent = `${unit.name} 匹配 ${majorLabel(major)}，来源为研招网硕士专业目录。${partial}`;
+        els.detailMajorTags.innerHTML = [
+          `<span class="chip blue">${major.code}</span>`,
+          `<span class="chip green">${major.degreeType || "专业"}</span>`,
+          `<span class="chip">${major.categoryName || "未标明门类"}</span>`,
+          `<span class="chip">${major.disciplineName || "未标明学科"}</span>`,
+          exactSubjectRecords.length ? `<span class="chip green">初试科目 ${exactSubjectRecords.length} 条</span>` : "",
+          offering.detailUrl ? `<a class="chip" href="${offering.detailUrl}" target="_blank" rel="noreferrer">专业目录入口</a>` : ""
+        ].filter(Boolean).join("");
+      } else {
+        els.detailMajor.textContent = `${unit.name} 不在当前专业“${majorLabel(major)}”的本地专业目录数据中。`;
+        els.detailMajorTags.innerHTML = [
+          `<span class="chip blue">${major.code}</span>`,
+          `<span class="chip">${major.name}</span>`
+        ].join("");
+      }
+      els.detailScore.textContent = scoreResult.detail;
+      if (scoreResult.sourceType === "real" && scoreResult.lines?.length) {
+        els.detailScoreTags.innerHTML = [
+          `<span class="chip ${scoreResult.meta.className}">${scoreResult.meta.label}</span>`,
+          `<span class="chip blue">真实复试线</span>`,
+          ...scoreResult.lines.map((line) => {
+            const college = line.collegeName ? ` · ${line.collegeName}` : "";
+            const mode = line.studyMode ? ` · ${line.studyMode}` : "";
+            const subject = [line.politics, line.foreignLanguage, line.business1, line.business2].some((value) => value !== null)
+              ? ` · 单科 ${[line.politics, line.foreignLanguage, line.business1, line.business2].map((value) => value ?? "-").join("/")}`
+              : "";
+            const label = `${line.year} 总分 ${line.totalScore}${college}${mode}${subject}`;
+            return line.sourceUrl
+              ? `<a class="chip" href="${escapeHtml(line.sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(label)}</a>`
+              : `<span class="chip">${escapeHtml(label)}</span>`;
+          })
+        ].join("");
+      } else if (scoreResult.sourceType === "estimated") {
+        const estimate = scoreResult.estimate;
+        els.detailScoreTags.innerHTML = [
+          `<span class="chip ${scoreResult.meta.className}">${scoreResult.meta.label}</span>`,
+          `<span class="chip estimated">估算参考线 ${scoreResult.referenceLine}</span>`,
+          `<span class="chip">${escapeHtml(estimate.base.label)}</span>`,
+          `<span class="chip">院校层级 ${escapeHtml(estimate.level.label)} +${estimate.level.points}</span>`,
+          `<span class="chip">专业热度 ${escapeHtml(estimate.heat.label)} +${estimate.heat.points}</span>`,
+          `<span class="chip">地区竞争 ${escapeHtml(estimate.region.label)} +${estimate.region.points}</span>`,
+          `<span class="chip empty">非真实复试线</span>`
+        ].join("");
+      } else {
+        els.detailScoreTags.innerHTML = `<span class="chip ${scoreResult.meta.className}">${escapeHtml(scoreResult.summary)}</span>`;
+      }
+    }
+
+    function render() {
+      ensureMajorState();
+      const list = getFilteredUnits();
+      if (!list.some((unit) => unit.id === state.selectedId)) {
+        state.selectedId = list[0] ? list[0].id : "";
+      }
+      renderStats();
+      renderTopBars();
+      renderMajorFilterStatus();
+      renderTargetWall();
+      renderProvinceList();
+      renderSummary(list);
+      renderScoreAdvisorStatus(list);
+      renderTable(list);
+      renderDetail(list);
+    }
+
+    function exportCsv() {
+      const list = getFilteredUnits();
+      const lang = selectedLanguage();
+      const major = selectedMajor();
+      const header = ["代码", "招生单位", "省份", "主管部门", "标签", "当前初试外语筛选", "初试外语科目", "初试外语筛选原因", "当前专业", "专业门类/学科", "专业筛选原因", "详情URL", "网报公告URL", "招生简章URL", "在线咨询URL"];
+      const rows = list.map((unit) => [
+        unit.code || "",
+        unit.name,
+        unit.provinceName,
+        unit.supervisor || "",
+        (unit.tags || []).join("/"),
+        lang.name,
+        major && exactSubjectRecordsFor(unit, major).length ? subjectForeignSummary(exactSubjectRecordsFor(unit, major), 20) : lang.subjects.join("/"),
+        languageMatchReason(unit),
+        major ? majorLabel(major) : "全部专业",
+        major ? majorMeta(major) : "",
+        majorMatchReason(unit),
+        unit.detailUrl || "",
+        unit.announcementUrl || "",
+        unit.brochureUrl || "",
+        unit.consultUrl || ""
+      ]);
+      const csv = [header, ...rows]
+        .map((row) => row.map((cell) => `"${String(cell).replaceAll('"', '""')}"`).join(","))
+        .join("\n");
+      const blob = new Blob(["\ufeff" + csv], { type: "text/csv;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "kaoyan-schools.csv";
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function bindEvents() {
+      document.addEventListener("click", (event) => {
+        if (!(event.target instanceof Element)) return;
+        const deleteCustomTaskButton = event.target.closest("[data-delete-custom-task-id]");
+        if (deleteCustomTaskButton) {
+          event.preventDefault();
+          event.stopPropagation();
+          removeCustomDailyTask(deleteCustomTaskButton.dataset.dailyTaskKey, deleteCustomTaskButton.dataset.deleteCustomTaskId);
+          renderTargetWall();
+          return;
+        }
+
+        const tagButton = event.target.closest("[data-tag-filter]");
+        if (tagButton) {
+          event.preventDefault();
+          event.stopPropagation();
+          applyFilters({ tag: tagButton.dataset.tagFilter });
+          return;
+        }
+
+        const provinceButton = event.target.closest("[data-province-filter]");
+        if (provinceButton) {
+          event.preventDefault();
+          event.stopPropagation();
+          applyFilters({ province: provinceButton.dataset.provinceFilter });
+          return;
+        }
+
+        const actionButton = event.target.closest("[data-filter-action]");
+        if (!actionButton) return;
+        event.preventDefault();
+        event.stopPropagation();
+        const action = actionButton.dataset.filterAction;
+        if (action === "reset") resetFilters();
+        if (action === "all-provinces") applyFilters({ province: "全部省份" });
+        if (action === "all-supervisors") applyFilters({ supervisor: "全部主管部门" });
+      }, true);
+
+      document.addEventListener("change", (event) => {
+        if (!(event.target instanceof HTMLInputElement)) return;
+        const checkbox = event.target.closest("[data-daily-task-id]");
+        if (!checkbox) return;
+        const key = checkbox.dataset.dailyTaskKey;
+        const id = checkbox.dataset.dailyTaskId;
+        if (!key || !id) return;
+        const completed = readDailyTaskCompletion(key);
+        if (checkbox.checked) completed.add(id);
+        else completed.delete(id);
+        writeDailyTaskCompletion(key, completed);
+        renderTargetWall();
+      });
+
+      document.addEventListener("submit", (event) => {
+        if (!(event.target instanceof HTMLFormElement)) return;
+        const form = event.target.closest("[data-custom-task-form]");
+        if (!form) return;
+        event.preventDefault();
+        const key = form.dataset.dailyTaskKey;
+        const text = String(new FormData(form).get("text") || "").trim();
+        const category = String(new FormData(form).get("category") || "自定义").trim() || "自定义";
+        const duration = String(new FormData(form).get("duration") || "").trim() || "30 分钟";
+        if (!key || !text) return;
+        addCustomDailyTask(key, { text, category, duration });
+        form.reset();
+        renderTargetWall();
+      });
+
+      els.searchInput.addEventListener("input", () => {
+        applyFilters({ query: els.searchInput.value.trim() });
+      });
+      els.majorSearchInput.addEventListener("input", () => {
+        applyFilters({ majorQuery: els.majorSearchInput.value.trim(), major: "all", selectedId: "" });
+      });
+      els.majorSearchInput.addEventListener("keydown", (event) => {
+        if (event.key !== "Enter") return;
+        const first = getMajorSearchResults()[0];
+        if (!first) return;
+        event.preventDefault();
+        applyFilters({ ...majorStateFromSelected(first), major: first.id, selectedId: "" });
+        loadDataForSelectedMajor();
+      });
+      els.targetSchoolInput.addEventListener("input", () => {
+        applyFilters({ targetQuery: els.targetSchoolInput.value.trim() });
+      });
+      els.applyTargetBtn.addEventListener("click", () => {
+        applyFilters({ targetQuery: els.targetSchoolInput.value.trim() });
+      });
+      els.targetFromSelectedBtn.addEventListener("click", () => {
+        const selected = units.find((unit) => unit.id === state.selectedId);
+        if (!selected) return;
+        applyFilters({ targetQuery: selected.code || selected.name });
+      });
+      els.clearTargetBtn.addEventListener("click", () => {
+        applyFilters({ targetQuery: "" });
+      });
+      els.majorGroupFilter.addEventListener("change", () => {
+        applyFilters({
+          majorGroup: els.majorGroupFilter.value,
+          majorDiscipline: "all",
+          major: "all",
+          selectedId: ""
+        });
+      });
+      els.majorDisciplineFilter.addEventListener("change", () => {
+        applyFilters({
+          majorDiscipline: els.majorDisciplineFilter.value,
+          major: "all",
+          selectedId: ""
+        });
+      });
+      els.provinceFilter.addEventListener("change", () => {
+        applyFilters({ province: els.provinceFilter.value });
+      });
+      els.tagFilter.addEventListener("change", () => {
+        applyFilters({ tag: els.tagFilter.value });
+      });
+      els.supervisorFilter.addEventListener("change", () => {
+        applyFilters({ supervisor: els.supervisorFilter.value });
+      });
+      els.languageFilter.addEventListener("change", () => {
+        applyFilters({ language: els.languageFilter.value });
+      });
+      els.majorFilter.addEventListener("change", () => {
+        const selected = majorById.get(els.majorFilter.value);
+        applyFilters({ ...majorStateFromSelected(selected), major: els.majorFilter.value, majorQuery: "", selectedId: "" });
+        loadDataForSelectedMajor();
+      });
+      els.sortFilter.addEventListener("change", () => {
+        applyFilters({ sort: els.sortFilter.value });
+      });
+      [
+        [els.scoreTotalInput, "scoreTotal"],
+        [els.scorePoliticsInput, "scorePolitics"],
+        [els.scoreForeignInput, "scoreForeign"],
+        [els.scoreBusiness1Input, "scoreBusiness1"],
+        [els.scoreBusiness2Input, "scoreBusiness2"]
+      ].forEach(([input, key]) => {
+        input.addEventListener("input", () => {
+          applyFilters({ [key]: input.value.trim(), selectedId: "" });
+        });
+      });
+      els.reloadScoreBtn.addEventListener("click", () => {
+        loadScoreDataForSelectedMajor({ force: true });
+      });
+      els.clearScoreBtn.addEventListener("click", () => {
+        applyFilters({
+          scoreTotal: "",
+          scorePolitics: "",
+          scoreForeign: "",
+          scoreBusiness1: "",
+          scoreBusiness2: "",
+          selectedId: ""
+        });
+      });
+      els.resetBtn.addEventListener("click", () => {
+        resetFilters();
+        loadDataForSelectedMajor();
+      });
+      els.clearMajorBtn.addEventListener("click", () => {
+        applyFilters({ majorGroup: "all", majorDiscipline: "all", majorQuery: "", major: "all", selectedId: "" });
+        loadDataForSelectedMajor();
+      });
+      els.exportBtn.addEventListener("click", exportCsv);
+    }
+
+    if (!data || !Array.isArray(data.provinces)) {
+      document.body.innerHTML = '<main class="container" style="padding:40px 0;"><div class="empty">数据文件 schools-data.js 未加载。</div></main>';
+    } else {
+      initFilters();
+      bindEvents();
+      render();
+    }
+  </script>
+</body>
+</html>
